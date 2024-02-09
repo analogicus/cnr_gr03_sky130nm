@@ -199,13 +199,12 @@ C {devices/lab_wire.sym} 40 390 0 0 {name=p9 sig_type=std_logic lab=IBIAS}
 C {devices/lab_wire.sym} 450 50 0 0 {name=p10 sig_type=std_logic lab=C_OUT}
 C {devices/lab_wire.sym} 1020 80 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {/home/ocheid/aicex/ip/cnr_ota_sky130nm/design/RPLY_BIAS_SKY130NM/RPLYBS_OTAN.sym} 1330 50 3 0 {name=x1}
-C {RPLY_MILESTONE1_SKY130NM/MILESTONE1_OTA.sym} 710 140 3 0 {name=x2}
 C {devices/lab_wire.sym} 950 310 1 0 {name=p12 sig_type=std_logic lab=IBIAS}
 C {devices/lab_wire.sym} 920 310 1 0 {name=p13 sig_type=std_logic lab=VR1}
 C {devices/lab_wire.sym} 860 310 1 0 {name=p14 sig_type=std_logic lab=VD1}
 C {devices/lab_wire.sym} 770 80 0 0 {name=p15 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 890 -130 0 0 {name=p16 sig_type=std_logic lab=OTA_OUT}
-C {/home/ocheid/aicex/ip/sun_tr_sky130nm/design/SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 180 330 1 0 {name=x3 }
+C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 180 330 1 0 {name=x3 }
 C {sky130_fd_pr/npn_05v5.sym} -170 460 0 0 {name=Q1
 model=npn_05v5_w1p00l2p00 m=1
 spiceprefix=X
@@ -214,3 +213,4 @@ C {sky130_fd_pr/npn_05v5.sym} 160 460 0 0 {name=Q2
 model=npn_05v5_w1p00l2p00 m=1
 spiceprefix=X
 }
+C {CNR_GR03_SKY130NM/MILESTONE1_OTA.sym} 710 140 3 0 {name=x4}
