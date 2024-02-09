@@ -8,13 +8,11 @@
 # lpe: Extract parasitics lpe/<CELL>.spi
 # drc: Run design rule checks on ../design/<LIB>/<CELL>.mag
 # -----------------------------------------------------------
-
+include ../tech/make/core.make
 
 PREFIX=
-LIB=CNR_GR03_SKY130NM
-CELL=CNR_GR03
+LIB=RPLY_MILESTONE1_SKY130NM
+CELL=RPLY_MILESTONE1
 
 #- Provide cells you want to check for the lvsall drcall commands
-CELLS = CNR_GR03
-
-include ../tech/make/core.make
+CELLS = RPLY_MILESTONE1

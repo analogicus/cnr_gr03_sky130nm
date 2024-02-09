@@ -1,0 +1,6 @@
+corner:
+  Lay: ''
+  Sch: ''
+ngspice:
+  library: RPLY_MILESTONE1_SKY130NM
+  cell: MILESTONE1

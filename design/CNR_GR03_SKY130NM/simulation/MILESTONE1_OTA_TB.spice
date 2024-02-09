@@ -1,0 +1,89 @@
+** sch_path: /home/ocheid/lpro/milestone1/rply_milestone1_sky130nm/design/RPLY_MILESTONE1_SKY130NM/MILESTONE1_OTA_TB.sch
+**.subckt MILESTONE1_OTA_TB
+V1 VDD_1V8 GND 1.8
+I0 IBIAS GND 20u
+C1 VOUT GND 40f m=1
+V2 VIN GND {1.8*(20/(16+16+4))}
+R4 VOUT VIP 500k m=1
+x1 VDD_1V8 IBIAS VOUT VIN VIP GND MILESTONE1_OTA
+**** begin user architecture code
+
+
+
+* ngspice commands
+.include corner.spi
+
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  RPLY_MILESTONE1_SKY130NM/MILESTONE1_OTA.sym # of pins=6
+** sym_path: /home/ocheid/lpro/milestone1/rply_milestone1_sky130nm/design/RPLY_MILESTONE1_SKY130NM/MILESTONE1_OTA.sym
+** sch_path: /home/ocheid/lpro/milestone1/rply_milestone1_sky130nm/design/RPLY_MILESTONE1_SKY130NM/MILESTONE1_OTA.sch
+.subckt MILESTONE1_OTA VDD IBIAS VOUT VIN_P VIN_N VSS
+*.iopin VDD
+*.iopin VSS
+*.iopin VOUT
+*.iopin IBIAS
+*.iopin VIN_N
+*.iopin VIN_P
+Cc net2 VOUT 70f m=1
+Rc net3 net2 21500 m=1
+x1 net4 net4 VSS VSS CNRATR_NCH_8C2F0
+x2 net3 net4 VSS VSS CNRATR_NCH_8C2F0
+x3 net4 VIN_N net1 net1 CNRATR_PCH_8C8F0
+x4 net3 VIN_P net1 net1 CNRATR_PCH_8C8F0
+x5 net1 IBIAS VDD VDD CNRATR_PCH_8C8F0
+x6 IBIAS IBIAS VDD VDD CNRATR_PCH_8C8F0
+x7 VOUT IBIAS VDD VDD CNRATR_PCH_8C2F0
+x8 VOUT net3 VSS VSS CNRATR_NCH_8C2F0
+.ends
+
+
+* expanding   symbol:
+*+  /home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_8C2F0.sym # of pins=4
+** sym_path: /home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_8C2F0.sym
+** sch_path: /home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_8C2F0.sch
+.subckt CNRATR_NCH_8C2F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.54 W=7.68 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:
+*+  /home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym # of pins=4
+** sym_path: /home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym
+** sch_path: /home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sch
+.subckt CNRATR_PCH_8C8F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=2.7 W=7.68 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:
+*+  /home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym # of pins=4
+** sym_path: /home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym
+** sch_path: /home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sch
+.subckt CNRATR_PCH_8C2F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8 L=0.54 W=7.68 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end

@@ -1,0 +1,107 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/MILESTONE1_OTA_lpe.spi
+#else
+.include ../../../work/xsch/MILESTONE1_OTA.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-6
+*abstol=1e-6 keepopinfo noopiter gminsteps=5
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+
+.param AVDD = {vdda}
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS VSS 0 dc 0
+VDD VDD_1V8 VSS dc 1.8
+IBIAS IBIAS VSS dc 20u
+Vtest IBIAS VSS dc 0
+*VSOURCE VS VSS SIN(0 1 100MEG 1NS 1E10)
+VIN VS VSS 0.001 AC 1 SIN (0 1 1MEG)
+
+
+R1 VS VIN_P 100k
+R2 VS VIN_N 100k
+*R3 VIN_N VOUT 500k
+
+
+CL1 VOUT VSS 40f
+
+
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+XDUT VDD_1V8 VSS VOUT IBIAS VIN_N VIN_P MILESTONE1_OTA
+
+
+
+.include ../../../design/tian_subckt.lib
+X999 VIN_N VOUT loopgainprobe
+
+*----------------------------------------------------------------
+* MEASURES
+*----------------------------------------------------------------
+
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+
+*.option savecurrents
+.save all
+.save V(X999.x) I(v.X999.Vi)
+.save v(XDUT.VIN_N) v(XDUT.VOUT) 
+.save i(v.Vtest)
+
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+optran 0 0 0 100n 10u 0
+op 
+*dc temp -25 100 2
+tran 10p 10u 
+write {cicname}_op.raw
+
+
+*----------------------------------------------------------------
+* LSTB analysis
+*----------------------------------------------------------------
+* Set voltage AC to 1
+ac dec 50 1 0.1G
+
+* Set Current to 1 
+alter i.X999.Ii acmag=1 
+alter v.X999.Vi acmag=0 
+ac dec 50 1 0.1G
+
+let lg_mag = db(tian_loop())
+let lg_phase = 180*cph(tian_loop())/pi
+
+
+write
+
+quit
+
+.endc
+
+.end
