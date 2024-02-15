@@ -17,8 +17,6 @@ N -150 320 -130 320 {
 lab=VD1}
 N 30 320 180 320 {
 lab=VR1}
-N 180 -80 180 320 {
-lab=VR1}
 N -150 -180 -150 -140 {
 lab=VDD}
 N -150 -180 180 -180 {
@@ -48,17 +46,13 @@ lab=VSS}
 N -150 490 -150 540 {
 lab=VSS}
 N -240 460 -190 460 {
-lab=VSS}
-N -240 460 -240 540 {
-lab=VSS}
+lab=VD1}
 N -150 540 180 540 {
 lab=VSS}
 N 180 490 180 540 {
 lab=VSS}
 N 90 460 140 460 {
-lab=VSS}
-N 90 460 90 540 {
-lab=VSS}
+lab=VD2}
 N 0 480 -0 540 {
 lab=VSS}
 N 0 390 -0 420 {
@@ -97,8 +91,6 @@ N 10 320 30 320 {
 lab=VR1}
 N 890 -170 890 -70 {
 lab=OTA_OUT}
-N 1320 -160 1320 -20 {
-lab=#net1}
 N 740 80 830 80 {
 lab=VDD}
 N 950 80 1040 80 {
@@ -109,34 +101,12 @@ N 920 230 920 320 {
 lab=VR1}
 N 950 230 950 320 {
 lab=IBIAS}
-N 1090 170 1200 170 {
-lab=#net2}
-N 1170 90 1200 90 {
-lab=#net3}
-N 1170 70 1170 90 {
-lab=#net3}
-N 1170 70 1200 70 {
-lab=#net3}
-N 1090 90 1170 90 {
-lab=#net3}
-N 1090 50 1200 50 {
-lab=#net4}
-N 1400 30 1460 30 {
-lab=#net5}
-N 1310 200 1310 290 {
-lab=#net6}
-N 1330 200 1330 290 {
-lab=#net7}
 N -0 -110 0 -30 {
 lab=OTA_OUT}
 N 180 320 180 330 {
 lab=VR1}
 N 180 410 180 430 {
 lab=VD2}
-N 90 370 160 370 {
-lab=VSS}
-N 90 370 90 460 {
-lab=VSS}
 N 180 460 250 460 {
 lab=VSS}
 N 250 460 250 540 {
@@ -145,6 +115,26 @@ N -150 460 -110 460 {
 lab=VSS}
 N -110 460 -110 540 {
 lab=VSS}
+N 110 370 160 370 {
+lab=VSS}
+N -240 390 -240 460 {
+lab=VD1}
+N -240 390 -150 390 {
+lab=VD1}
+N 90 420 180 420 {
+lab=VD2}
+N 90 420 90 460 {
+lab=VD2}
+N 80 370 80 380 {
+lab=VSS}
+N 80 370 110 370 {
+lab=VSS}
+N 80 380 80 540 {
+lab=VSS}
+N 180 190 180 320 {
+lab=VR1}
+N 180 -80 180 190 {
+lab=VR1}
 C {sky130_fd_pr/pfet_01v8.sym} -130 -110 0 1 {name=M1
 L=0.15
 W=1
@@ -193,12 +183,11 @@ C {devices/vsource.sym} 450 180 0 0 {name=V0 value=0 savecurrent=false}
 C {devices/isource.sym} 0 450 0 0 {name=I0 value=20u}
 C {devices/lab_wire.sym} -150 300 0 0 {name=p2 sig_type=std_logic lab=VD1}
 C {devices/lab_wire.sym} 180 290 0 0 {name=p3 sig_type=std_logic lab=VR1}
-C {devices/lab_wire.sym} 180 420 0 0 {name=p5 sig_type=std_logic lab=VD2}
+C {devices/lab_wire.sym} 160 420 0 0 {name=p5 sig_type=std_logic lab=VD2}
 C {devices/lab_wire.sym} -40 -110 0 0 {name=p8 sig_type=std_logic lab=OTA_OUT}
 C {devices/lab_wire.sym} 40 390 0 0 {name=p9 sig_type=std_logic lab=IBIAS}
 C {devices/lab_wire.sym} 450 50 0 0 {name=p10 sig_type=std_logic lab=C_OUT}
 C {devices/lab_wire.sym} 1020 80 0 0 {name=p6 sig_type=std_logic lab=VSS}
-C {/home/ocheid/aicex/ip/cnr_ota_sky130nm/design/RPLY_BIAS_SKY130NM/RPLYBS_OTAN.sym} 1330 50 3 0 {name=x1}
 C {devices/lab_wire.sym} 950 310 1 0 {name=p12 sig_type=std_logic lab=IBIAS}
 C {devices/lab_wire.sym} 920 310 1 0 {name=p13 sig_type=std_logic lab=VR1}
 C {devices/lab_wire.sym} 860 310 1 0 {name=p14 sig_type=std_logic lab=VD1}
@@ -214,3 +203,4 @@ model=npn_05v5_w1p00l2p00 m=1
 spiceprefix=X
 }
 C {CNR_GR03_SKY130NM/MILESTONE1_OTA.sym} 710 140 3 0 {name=x4}
+C {devices/vsource.sym} 450 180 0 0 {name=V2 value=0 savecurrent=false}
