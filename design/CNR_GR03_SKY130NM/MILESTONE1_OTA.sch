@@ -159,22 +159,22 @@ C {devices/iopin.sym} -190 -150 0 1 {name=p5 lab=VIN_N}
 C {devices/iopin.sym} 230 -150 0 0 {name=p6 lab=VIN_P}
 C {devices/capa.sym} 370 -80 3 0 {name=Cc
 m=1
-value=70f
+value=80f
 footprint=1206
 device="ceramic capacitor"}
 C {devices/res.sym} 270 -80 3 0 {name=Rc
-value=21500
+value=6000
 footprint=1206
 device=resistor
 m=1}
 C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C2F0.sym} -90 -10 0 1 {name=x1 }
 C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C2F0.sym} 120 -10 0 0 {name=x2 }
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C4F0.sym} -170 -150 0 0 {name=x3 }
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C4F0.sym} 200 -150 0 1 {name=x4 }
+C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym} -170 -150 0 0 {name=x3 }
+C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym} 200 -150 0 1 {name=x4 }
 C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym} -30 -330 0 0 {name=x5 }
 C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym} -390 -330 0 1 {name=x6 }
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C4F0.sym} 420 -330 0 0 {name=x7 }
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C4F0.sym} 420 0 0 0 {name=x8 }
+C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 420 -330 0 0 {name=x7 }
+C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C2F0.sym} 420 0 0 0 {name=x8 }
 C {devices/lab_wire.sym} 80 -220 0 0 {name=p7 sig_type=std_logic lab=V_IN_S}
 C {devices/lab_wire.sym} 10 -10 0 0 {name=p9 sig_type=std_logic lab=VG}
 C {devices/lab_wire.sym} 370 0 0 0 {name=p10 sig_type=std_logic lab=VC}
