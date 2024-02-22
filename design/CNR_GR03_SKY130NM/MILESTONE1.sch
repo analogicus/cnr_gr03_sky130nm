@@ -89,17 +89,17 @@ N 10 240 10 320 {
 lab=VR1}
 N 10 320 30 320 {
 lab=VR1}
-N 890 -170 890 -70 {
+N 1430 -180 1430 -80 {
 lab=OTA_OUT}
-N 740 80 830 80 {
+N 1280 70 1370 70 {
 lab=VDD}
-N 950 80 1040 80 {
+N 1490 70 1580 70 {
 lab=VSS}
-N 860 230 860 320 {
+N 1400 220 1400 310 {
 lab=VD1}
-N 920 230 920 320 {
+N 1460 220 1460 310 {
 lab=VR1}
-N 950 230 950 320 {
+N 1490 220 1490 310 {
 lab=IBIAS}
 N -0 -110 0 -30 {
 lab=OTA_OUT}
@@ -135,6 +135,114 @@ N 180 190 180 320 {
 lab=VR1}
 N 180 -80 180 190 {
 lab=VR1}
+N 640 -160 640 -140 {
+lab=VDD}
+N 640 -170 640 -160 {
+lab=VDD}
+N 640 -180 640 -170 {
+lab=VDD}
+N 490 -180 640 -180 {
+lab=VDD}
+N 640 -110 670 -110 {
+lab=VDD}
+N 670 -110 680 -110 {
+lab=VDD}
+N 680 -120 680 -110 {
+lab=VDD}
+N 680 -130 680 -120 {
+lab=VDD}
+N 680 -140 680 -130 {
+lab=VDD}
+N 680 -150 680 -140 {
+lab=VDD}
+N 680 -160 680 -150 {
+lab=VDD}
+N 680 -170 680 -160 {
+lab=VDD}
+N 680 -180 680 -170 {
+lab=VDD}
+N 670 -180 680 -180 {
+lab=VDD}
+N 660 -180 670 -180 {
+lab=VDD}
+N 650 -180 660 -180 {
+lab=VDD}
+N 640 -180 650 -180 {
+lab=VDD}
+N 570 -110 600 -110 {
+lab=OTA_OUT}
+N 560 -110 570 -110 {
+lab=OTA_OUT}
+N 560 -110 560 -100 {
+lab=OTA_OUT}
+N 560 -100 560 -90 {
+lab=OTA_OUT}
+N 560 -90 560 -80 {
+lab=OTA_OUT}
+N 560 -80 560 -70 {
+lab=OTA_OUT}
+N 560 -70 560 -60 {
+lab=OTA_OUT}
+N 560 -60 560 -50 {
+lab=OTA_OUT}
+N 550 -50 560 -50 {
+lab=OTA_OUT}
+N 540 -50 550 -50 {
+lab=OTA_OUT}
+N 530 -50 540 -50 {
+lab=OTA_OUT}
+N 520 -50 530 -50 {
+lab=OTA_OUT}
+N 510 -50 520 -50 {
+lab=OTA_OUT}
+N 500 -50 510 -50 {
+lab=OTA_OUT}
+N 490 -50 500 -50 {
+lab=OTA_OUT}
+N 480 -50 490 -50 {
+lab=OTA_OUT}
+N 470 -50 480 -50 {
+lab=OTA_OUT}
+N 460 -50 470 -50 {
+lab=OTA_OUT}
+N 390 -50 460 -50 {
+lab=OTA_OUT}
+N 380 -50 390 -50 {
+lab=OTA_OUT}
+N 370 -50 380 -50 {
+lab=OTA_OUT}
+N 360 -50 370 -50 {
+lab=OTA_OUT}
+N 350 -50 360 -50 {
+lab=OTA_OUT}
+N 340 -50 350 -50 {
+lab=OTA_OUT}
+N 330 -50 340 -50 {
+lab=OTA_OUT}
+N 320 -50 330 -50 {
+lab=OTA_OUT}
+N 310 -50 320 -50 {
+lab=OTA_OUT}
+N 480 -20 490 -20 {
+lab=C_OUT}
+N 470 -20 480 -20 {
+lab=C_OUT}
+N 460 -20 470 -20 {
+lab=C_OUT}
+N 450 -20 460 -20 {
+lab=C_OUT}
+N 640 -80 640 -30 {
+lab=I_OUT2}
+N 640 -30 640 -20 {
+lab=I_OUT2}
+N 640 -20 650 -20 {
+lab=I_OUT2}
+N 650 -20 660 -20 {
+lab=I_OUT2}
+N 660 -20 670 -20 {
+lab=I_OUT2}
+N 670 -20 680 -20 {
+lab=I_OUT2}
 C {sky130_fd_pr/pfet_01v8.sym} -130 -110 0 1 {name=M1
 L=0.15
 W=1
@@ -187,12 +295,12 @@ C {devices/lab_wire.sym} 160 420 0 0 {name=p5 sig_type=std_logic lab=VD2}
 C {devices/lab_wire.sym} -40 -110 0 0 {name=p8 sig_type=std_logic lab=OTA_OUT}
 C {devices/lab_wire.sym} 40 390 0 0 {name=p9 sig_type=std_logic lab=IBIAS}
 C {devices/lab_wire.sym} 450 50 0 0 {name=p10 sig_type=std_logic lab=C_OUT}
-C {devices/lab_wire.sym} 1020 80 0 0 {name=p6 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 950 310 1 0 {name=p12 sig_type=std_logic lab=IBIAS}
-C {devices/lab_wire.sym} 920 310 1 0 {name=p13 sig_type=std_logic lab=VR1}
-C {devices/lab_wire.sym} 860 310 1 0 {name=p14 sig_type=std_logic lab=VD1}
-C {devices/lab_wire.sym} 770 80 0 0 {name=p15 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 890 -130 0 0 {name=p16 sig_type=std_logic lab=OTA_OUT}
+C {devices/lab_wire.sym} 1560 70 0 0 {name=p6 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 1490 300 1 0 {name=p12 sig_type=std_logic lab=IBIAS}
+C {devices/lab_wire.sym} 1460 300 1 0 {name=p13 sig_type=std_logic lab=VR1}
+C {devices/lab_wire.sym} 1400 300 1 0 {name=p14 sig_type=std_logic lab=VD1}
+C {devices/lab_wire.sym} 1310 70 0 0 {name=p15 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 1430 -140 0 0 {name=p16 sig_type=std_logic lab=OTA_OUT}
 C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 180 330 1 0 {name=x3 }
 C {sky130_fd_pr/npn_05v5.sym} -170 460 0 0 {name=Q1
 model=npn_05v5_w1p00l2p00 m=1
@@ -202,5 +310,21 @@ C {sky130_fd_pr/npn_05v5.sym} 160 460 0 0 {name=Q2
 model=npn_05v5_w1p00l2p00 m=1
 spiceprefix=X
 }
-C {CNR_GR03_SKY130NM/MILESTONE1_OTA.sym} 710 140 3 0 {name=x4}
+C {CNR_GR03_SKY130NM/MILESTONE1_OTA.sym} 1250 130 3 0 {name=x4}
 C {devices/vsource.sym} 450 180 0 0 {name=V2 value=0 savecurrent=false}
+C {devices/iopin.sym} 490 -20 0 0 {name=I_OUT1 lab=I_OUT1}
+C {sky130_fd_pr/pfet_01v8.sym} 620 -110 0 0 {name=M4
+L=0.15
+W=1
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8
+spiceprefix=X
+}
+C {devices/iopin.sym} 680 -20 0 0 {name=I_OUT2 lab=I_OUT2}
