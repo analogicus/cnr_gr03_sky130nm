@@ -127,17 +127,17 @@ C {devices/iopin.sym} -230 -340 0 1 {name=p1 lab=VDD}
 C {devices/iopin.sym} 70 0 0 1 {name=p2 lab=VIN}
 C {devices/iopin.sym} 460 0 0 0 {name=p3 lab=VIP}
 C {devices/iopin.sym} -260 400 0 1 {name=p4 lab=VSS}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_8C8F0.sym} 110 0 0 0 {name=x13}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_8C8F0.sym} 420 0 0 1 {name=x1}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 240 160 0 0 {name=x2 }
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 110 160 0 1 {name=x3 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_8C8F0.sym} 110 0 0 0 {name=x13}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_8C8F0.sym} 420 0 0 1 {name=x1}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 240 160 0 0 {name=x2 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 110 160 0 1 {name=x3 }
 C {devices/iopin.sym} 70 100 1 1 {name=p5 lab=IBIAS}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 110 -260 0 0 {name=x5}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} -110 -260 0 1 {name=x4}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 420 -260 0 1 {name=x6}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 570 -260 0 0 {name=x7}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} -110 310 0 1 {name=x8}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 570 310 0 0 {name=x9}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 110 -260 0 0 {name=x5}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} -110 -260 0 1 {name=x4}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 420 -260 0 1 {name=x6}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 570 -260 0 0 {name=x7}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} -110 310 0 1 {name=x8}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 570 310 0 0 {name=x9}
 C {devices/lab_wire.sym} 260 0 0 0 {name=l24 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 240 30 0 0 {name=l15 sig_type=std_logic lab=VS}
 C {devices/lab_pin.sym} 150 -100 0 1 {name=l6 sig_type=std_logic lab=VBP1}
