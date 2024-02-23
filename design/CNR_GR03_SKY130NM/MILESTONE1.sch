@@ -5,90 +5,6 @@ K {}
 V {}
 S {}
 E {}
-N 0 -110 140 -110 {
-lab=OTA_OUT}
-N -110 -110 -0 -110 {
-lab=OTA_OUT}
-N -130 320 -30 320 {
-lab=VD1}
-N -150 -80 -150 320 {
-lab=VD1}
-N -150 320 -130 320 {
-lab=VD1}
-N 30 320 180 320 {
-lab=VR1}
-N -150 -180 -150 -140 {
-lab=VDD}
-N -150 -180 180 -180 {
-lab=VDD}
-N 180 -180 180 -140 {
-lab=VDD}
-N 450 -180 450 -140 {
-lab=VDD}
-N 180 -180 450 -180 {
-lab=VDD}
-N 80 -110 80 -50 {
-lab=OTA_OUT}
-N 80 -50 310 -50 {
-lab=OTA_OUT}
-N 310 -110 310 -50 {
-lab=OTA_OUT}
-N 310 -110 410 -110 {
-lab=OTA_OUT}
-N -300 -180 -150 -180 {
-lab=VDD}
-N -360 -180 -300 -180 {
-lab=VDD}
-N -150 320 -150 430 {
-lab=VD1}
-N -360 540 -150 540 {
-lab=VSS}
-N -150 490 -150 540 {
-lab=VSS}
-N -240 460 -190 460 {
-lab=VD1}
-N -150 540 180 540 {
-lab=VSS}
-N 180 490 180 540 {
-lab=VSS}
-N 90 460 140 460 {
-lab=VD2}
-N 0 480 -0 540 {
-lab=VSS}
-N 0 390 -0 420 {
-lab=IBIAS}
-N -0 390 60 390 {
-lab=IBIAS}
-N 450 -80 450 150 {
-lab=C_OUT}
-N 450 210 450 540 {
-lab=VSS}
-N 190 540 450 540 {
-lab=VSS}
-N 180 540 190 540 {
-lab=VSS}
-N -200 -110 -150 -110 {
-lab=VDD}
-N -200 -180 -200 -110 {
-lab=VDD}
-N 180 -110 230 -110 {
-lab=VDD}
-N 230 -180 230 -110 {
-lab=VDD}
-N 450 -110 490 -110 {
-lab=VDD}
-N 490 -180 490 -110 {
-lab=VDD}
-N 450 -180 490 -180 {
-lab=VDD}
-N -10 240 -10 320 {
-lab=VD1}
-N -30 320 -10 320 {
-lab=VD1}
-N 10 240 10 320 {
-lab=VR1}
-N 10 320 30 320 {
-lab=VR1}
 N 1430 -180 1430 -80 {
 lab=OTA_OUT}
 N 1280 70 1370 70 {
@@ -101,230 +17,163 @@ N 1460 220 1460 310 {
 lab=VR1}
 N 1490 220 1490 310 {
 lab=IBIAS}
-N -0 -110 0 -30 {
+N -110 -90 30 -90 {
 lab=OTA_OUT}
-N 180 320 180 330 {
-lab=VR1}
-N 180 410 180 430 {
-lab=VD2}
-N 180 460 250 460 {
-lab=VSS}
-N 250 460 250 540 {
-lab=VSS}
-N -150 460 -110 460 {
-lab=VSS}
-N -110 460 -110 540 {
-lab=VSS}
-N 110 370 160 370 {
-lab=VSS}
-N -240 390 -240 460 {
+N -220 -90 -110 -90 {
+lab=OTA_OUT}
+N -240 340 -140 340 {
 lab=VD1}
-N -240 390 -150 390 {
+N -260 -60 -260 340 {
 lab=VD1}
-N 90 420 180 420 {
-lab=VD2}
-N 90 420 90 460 {
-lab=VD2}
-N 80 370 80 380 {
-lab=VSS}
-N 80 370 110 370 {
-lab=VSS}
-N 80 380 80 540 {
-lab=VSS}
-N 180 190 180 320 {
+N -260 340 -240 340 {
+lab=VD1}
+N -80 340 70 340 {
 lab=VR1}
-N 180 -80 180 190 {
+N -260 -160 -260 -120 {
+lab=VDD}
+N -260 -160 70 -160 {
+lab=VDD}
+N 70 -160 70 -120 {
+lab=VDD}
+N 340 -160 340 -120 {
+lab=VDD}
+N 70 -160 340 -160 {
+lab=VDD}
+N -30 -90 -30 -30 {
+lab=OTA_OUT}
+N -30 -30 200 -30 {
+lab=OTA_OUT}
+N 200 -90 200 -30 {
+lab=OTA_OUT}
+N 200 -90 300 -90 {
+lab=OTA_OUT}
+N -410 -160 -260 -160 {
+lab=VDD}
+N -470 -160 -410 -160 {
+lab=VDD}
+N -470 560 -260 560 {
+lab=VSS}
+N -260 560 70 560 {
+lab=VSS}
+N 340 -60 340 170 {
+lab=C_OUT}
+N 340 230 340 560 {
+lab=VSS}
+N 80 560 340 560 {
+lab=VSS}
+N 70 560 80 560 {
+lab=VSS}
+N -310 -90 -260 -90 {
+lab=VDD}
+N -310 -160 -310 -90 {
+lab=VDD}
+N 70 -90 120 -90 {
+lab=VDD}
+N 120 -160 120 -90 {
+lab=VDD}
+N 340 -90 380 -90 {
+lab=VDD}
+N 380 -160 380 -90 {
+lab=VDD}
+N 340 -160 380 -160 {
+lab=VDD}
+N -120 260 -120 340 {
+lab=VD1}
+N -140 340 -120 340 {
+lab=VD1}
+N -100 260 -100 340 {
 lab=VR1}
-N 640 -160 640 -140 {
+N -100 340 -80 340 {
+lab=VR1}
+N -110 -90 -110 -10 {
+lab=OTA_OUT}
+N 70 340 70 350 {
+lab=VR1}
+N 70 430 70 450 {
+lab=VD2}
+N 70 210 70 340 {
+lab=VR1}
+N 70 -60 70 210 {
+lab=VR1}
+N 70 420 70 430 {
+lab=VD2}
+N 70 350 70 360 {
+lab=VR1}
+N -260 340 -260 410 {
+lab=VD1}
+N 70 450 70 470 {
+lab=VD2}
+N 70 470 70 480 {
+lab=VD2}
+N -260 410 -260 450 {
+lab=VD1}
+N 70 540 70 560 {
+lab=VSS}
+N 10 510 30 510 {
+lab=VSS}
+N 10 510 10 560 {
+lab=VSS}
+N -260 540 -260 560 {
+lab=VSS}
+N -260 450 -260 480 {
+lab=VD1}
+N -300 510 -300 560 {
+lab=VSS}
+N 340 340 400 340 {
+lab=VSS}
+N 380 -160 530 -160 {
 lab=VDD}
-N 640 -170 640 -160 {
+N 530 -160 530 -120 {
 lab=VDD}
-N 640 -180 640 -170 {
-lab=VDD}
-N 490 -180 640 -180 {
-lab=VDD}
-N 640 -110 670 -110 {
-lab=VDD}
-N 670 -110 680 -110 {
-lab=VDD}
-N 680 -120 680 -110 {
-lab=VDD}
-N 680 -130 680 -120 {
-lab=VDD}
-N 680 -140 680 -130 {
-lab=VDD}
-N 680 -150 680 -140 {
-lab=VDD}
-N 680 -160 680 -150 {
-lab=VDD}
-N 680 -170 680 -160 {
-lab=VDD}
-N 680 -180 680 -170 {
-lab=VDD}
-N 670 -180 680 -180 {
-lab=VDD}
-N 660 -180 670 -180 {
-lab=VDD}
-N 650 -180 660 -180 {
-lab=VDD}
-N 640 -180 650 -180 {
-lab=VDD}
-N 570 -110 600 -110 {
+N 200 -30 440 -30 {
 lab=OTA_OUT}
-N 560 -110 570 -110 {
+N 440 -90 440 -30 {
 lab=OTA_OUT}
-N 560 -110 560 -100 {
+N 440 -90 490 -90 {
 lab=OTA_OUT}
-N 560 -100 560 -90 {
-lab=OTA_OUT}
-N 560 -90 560 -80 {
-lab=OTA_OUT}
-N 560 -80 560 -70 {
-lab=OTA_OUT}
-N 560 -70 560 -60 {
-lab=OTA_OUT}
-N 560 -60 560 -50 {
-lab=OTA_OUT}
-N 550 -50 560 -50 {
-lab=OTA_OUT}
-N 540 -50 550 -50 {
-lab=OTA_OUT}
-N 530 -50 540 -50 {
-lab=OTA_OUT}
-N 520 -50 530 -50 {
-lab=OTA_OUT}
-N 510 -50 520 -50 {
-lab=OTA_OUT}
-N 500 -50 510 -50 {
-lab=OTA_OUT}
-N 490 -50 500 -50 {
-lab=OTA_OUT}
-N 480 -50 490 -50 {
-lab=OTA_OUT}
-N 470 -50 480 -50 {
-lab=OTA_OUT}
-N 460 -50 470 -50 {
-lab=OTA_OUT}
-N 390 -50 460 -50 {
-lab=OTA_OUT}
-N 380 -50 390 -50 {
-lab=OTA_OUT}
-N 370 -50 380 -50 {
-lab=OTA_OUT}
-N 360 -50 370 -50 {
-lab=OTA_OUT}
-N 350 -50 360 -50 {
-lab=OTA_OUT}
-N 340 -50 350 -50 {
-lab=OTA_OUT}
-N 330 -50 340 -50 {
-lab=OTA_OUT}
-N 320 -50 330 -50 {
-lab=OTA_OUT}
-N 310 -50 320 -50 {
-lab=OTA_OUT}
-N 480 -20 490 -20 {
-lab=C_OUT}
-N 470 -20 480 -20 {
-lab=C_OUT}
-N 460 -20 470 -20 {
-lab=C_OUT}
-N 450 -20 460 -20 {
-lab=C_OUT}
-N 640 -80 640 -30 {
+N 530 -50 530 0 {
 lab=I_OUT2}
-N 640 -30 640 -20 {
+N 530 0 580 0 {
 lab=I_OUT2}
-N 640 -20 650 -20 {
-lab=I_OUT2}
-N 650 -20 660 -20 {
-lab=I_OUT2}
-N 660 -20 670 -20 {
-lab=I_OUT2}
-N 670 -20 680 -20 {
-lab=I_OUT2}
-C {sky130_fd_pr/pfet_01v8.sym} -130 -110 0 1 {name=M1
-L=0.15
-W=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {sky130_fd_pr/pfet_01v8.sym} 160 -110 0 0 {name=M2
-L=0.15
-W=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {sky130_fd_pr/pfet_01v8.sym} 430 -110 0 0 {name=M3
-L=0.15
-W=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/iopin.sym} -360 -180 0 1 {name=p1 lab=VDD}
-C {devices/iopin.sym} -360 540 0 1 {name=p4 lab=VSS}
-C {devices/vsource.sym} 450 180 0 0 {name=V0 value=0 savecurrent=false}
-C {devices/isource.sym} 0 450 0 0 {name=I0 value=20u}
-C {devices/lab_wire.sym} -150 300 0 0 {name=p2 sig_type=std_logic lab=VD1}
-C {devices/lab_wire.sym} 180 290 0 0 {name=p3 sig_type=std_logic lab=VR1}
-C {devices/lab_wire.sym} 160 420 0 0 {name=p5 sig_type=std_logic lab=VD2}
-C {devices/lab_wire.sym} -40 -110 0 0 {name=p8 sig_type=std_logic lab=OTA_OUT}
-C {devices/lab_wire.sym} 40 390 0 0 {name=p9 sig_type=std_logic lab=IBIAS}
-C {devices/lab_wire.sym} 450 50 0 0 {name=p10 sig_type=std_logic lab=C_OUT}
+N 530 -90 580 -90 {
+lab=VDD}
+N 580 -160 580 -90 {
+lab=VDD}
+N 530 -160 580 -160 {
+lab=VDD}
+C {devices/iopin.sym} -470 -160 0 1 {name=p1 lab=VDD}
+C {devices/iopin.sym} -470 560 0 1 {name=p4 lab=VSS}
+C {devices/vsource.sym} 340 200 0 0 {name=V0 value=0 savecurrent=false}
 C {devices/lab_wire.sym} 1560 70 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 1490 300 1 0 {name=p12 sig_type=std_logic lab=IBIAS}
 C {devices/lab_wire.sym} 1460 300 1 0 {name=p13 sig_type=std_logic lab=VR1}
 C {devices/lab_wire.sym} 1400 300 1 0 {name=p14 sig_type=std_logic lab=VD1}
 C {devices/lab_wire.sym} 1310 70 0 0 {name=p15 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 1430 -140 0 0 {name=p16 sig_type=std_logic lab=OTA_OUT}
-C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 180 330 1 0 {name=x3 }
-C {sky130_fd_pr/npn_05v5.sym} -170 460 0 0 {name=Q1
-model=npn_05v5_w1p00l2p00 m=1
-spiceprefix=X
-}
-C {sky130_fd_pr/npn_05v5.sym} 160 460 0 0 {name=Q2
-model=npn_05v5_w1p00l2p00 m=1
-spiceprefix=X
-}
 C {CNR_GR03_SKY130NM/MILESTONE1_OTA.sym} 1250 130 3 0 {name=x4}
-C {devices/vsource.sym} 450 180 0 0 {name=V2 value=0 savecurrent=false}
-C {devices/iopin.sym} 490 -20 0 0 {name=I_OUT1 lab=I_OUT1}
-C {sky130_fd_pr/pfet_01v8.sym} 620 -110 0 0 {name=M4
-L=0.15
-W=1
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=pfet_01v8
+C {devices/iopin.sym} 400 340 0 0 {name=I_OUT1 lab=I_OUT1}
+C {devices/iopin.sym} 580 0 0 0 {name=I_OUT2 lab=I_OUT2}
+C {devices/lab_wire.sym} -260 320 0 0 {name=p2 sig_type=std_logic lab=VD1}
+C {devices/lab_wire.sym} 70 310 0 0 {name=p3 sig_type=std_logic lab=VR1}
+C {devices/lab_wire.sym} 70 440 0 0 {name=p5 sig_type=std_logic lab=VD2}
+C {devices/lab_wire.sym} -150 -90 0 0 {name=p8 sig_type=std_logic lab=OTA_OUT}
+C {devices/lab_wire.sym} 340 70 0 0 {name=p10 sig_type=std_logic lab=C_OUT}
+C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C1F2.sym} 300 -90 0 0 {name=x3[20:0]}
+C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C1F2.sym} 30 -90 0 0 {name=x2[20:0]}
+C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C1F2.sym} -220 -90 0 1 {name=x5[20:0]}
+C {devices/res.sym} 70 390 0 0 {name=R1
+value=1k
+footprint=1206
+device=resistor
+m=1}
+C {sky130_fd_pr/pnp_05v5.sym} -280 510 0 0 {name=Q1
+model=pnp_05v5_W3p40L3p40
+m=1
 spiceprefix=X
 }
-C {devices/iopin.sym} 680 -20 0 0 {name=I_OUT2 lab=I_OUT2}
+C {sky130_fd_pr/pnp_05v5.sym} 50 510 0 0 {name=Q2
+model=pnp_05v5_W3p40L3p40
+m=5
+spiceprefix=X
+}
+C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C1F2.sym} 490 -90 0 0 {name=x1[20:0]}
