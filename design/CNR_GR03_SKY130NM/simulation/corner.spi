@@ -11,12 +11,16 @@
 .lib "../../../tech/ngspice/supply.spi" Vl
 
 
+VDD VDD 0 dc 1.8 
+VSS VSS 0 dc 0
+
+
 .option savecurrents
 .save all
 .control
 optran 0 0 0 10n 10u 0
 op
-write MILESTONE1_OTA_TB.raw
+write MILESTONE1.raw
 *exit
 .endc
 .end
