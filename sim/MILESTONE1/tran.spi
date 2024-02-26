@@ -44,12 +44,12 @@ XDUT VDD VSS IOUT1 IOUT2 MILESTONE1
 #ifdef Debug
 .save all
 #else
-.save v(VSS) v(VDD) i(V.XDUT.V0) v(XDUT.VD1) v(XDUT.VR1) v(XDUT.VD2) v(XDUT.OTA_OUT)
+.save v(VSS) v(VDD) i(V.XDUT.V0) v(XDUT.VD1) v(XDUT.VR1) v(XDUT.VD2) v(XDUT.OTA_OUT) v(IOUT1)
 *.save all
-#endif
+#endifmak
 
 *----------------------------------------------------------------
-* NGSPICE control
+* NGSPICE controlplo
 *----------------------------------------------------------------
 .control
 set num_threads=8

@@ -1,17 +1,13 @@
-
-
-all: typical etc mc summary
-
-include ../../tech/make/sim.make
-
 TB=tran
 VIEW=Sch
 #VIEW=Lay
-CELL=MILESTONE2
-LIB =MILESTONE2
+#CELL=MILESTONE2
+#LIB =MILESTONE2
 OPT=
 
-
+netlist:
+	cd ../../work && xschem -q -x -b -s -n ../design/CNR_GR03_SKY130NM/MILESTONE2.sch
+	perl -pi -e "s/\*\*\.subckt/\.subckt/ig;s/\*\*\.ends/\.ends/ig;" ../../work/xsch/MILESTONE2.spice
 
 test:
 	${MAKE} typical OPT="Debug"
@@ -46,6 +42,7 @@ summary:
 slide:
 	pandoc -s  -t slidy README.md -o README.html
 
+all: typical etc mc summary slide
 
 clean:
 	-rm -rf output_*
@@ -53,3 +50,6 @@ clean:
 	-rm *.run
 	-rm *.pdf
 	-rm *.csv
+
+
+#include ../../tech/make/sim.make

@@ -20,7 +20,7 @@ VSS VSS 0 dc 0
 .control
 optran 0 0 0 10n 10u 0
 op
-write MILESTONE1.raw
+write MILESTONE2_TB.raw
 *exit
 .endc
 .end
