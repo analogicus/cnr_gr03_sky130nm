@@ -25,10 +25,10 @@
 *-----------------------------------------------------------------
 VSS  VSS  0 dc 0
 VDD  VDD_1V8 VSS dc 1.8
-VRST RST VSS PULSE(0 1.8 0.0 2NS 2NS 50NS 250NS)
-*VRST RST VSS dc 1
+VRST RST VSS PULSE(0 1.8 0.0 2NS 2NS 75NS 275NS)
+*VRST RST VSS dc 0
 IIN VSS I_IN dc 60u
-VREF VREF_I VSS dc 1.2
+VREF VREF_I VSS dc 1.0
 
 *-----------------------------------------------------------------
 * DUT
@@ -47,7 +47,7 @@ XDUT RST OUT I_IN VREF_I VDD_1V8 VSS MILESTONE2
 #ifdef Debug
 .save all
 #else
-.save v(OUT) v(VDD) v(VSS) v(RST) v(VREF_I) v(I_IN) i(v.XDUT.V1)
+.save v(OUT) v(VDD) v(VSS) v(RST) v(VREF_I) v(I_IN) 
 *.save all
 #endif
 
@@ -61,7 +61,7 @@ set color1=black
 unset askquitex
 
 optran 0 0 0 10n 10u 0
-tran 1n 1u 0.25u
+tran 1n 1u 0.3u
 write {cicname}_tran.raw
 
 
