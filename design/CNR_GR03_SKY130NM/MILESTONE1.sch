@@ -309,10 +309,6 @@ N 80 560 90 560 {
 lab=VSS}
 N 70 560 80 560 {
 lab=VSS}
-N 340 110 340 210 {
-lab=I_OUT1}
-N 340 270 340 560 {
-lab=VSS}
 C {devices/iopin.sym} -470 -160 0 1 {name=p1 lab=VDD}
 C {devices/iopin.sym} -470 560 0 1 {name=p4 lab=VSS}
 C {devices/lab_wire.sym} 1040 120 0 0 {name=p6 sig_type=std_logic lab=VSS}
@@ -360,4 +356,3 @@ model=pnp_05v5_W3p40L3p40
 m=5
 spiceprefix=X
 }
-C {devices/vsource.sym} 340 240 0 0 {name=V1 value=0 savecurrent=false}
