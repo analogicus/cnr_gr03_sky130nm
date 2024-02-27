@@ -44,7 +44,7 @@ XDUT VDD VSS IOUT1 VREF MILESTONE1
 #ifdef Debug
 .save all
 #else
-.save v(VSS) v(VDD) v(XDUT.VD1) v(XDUT.VR1) v(XDUT.VD2) v(XDUT.OTA_OUT) v(IOUT1) v(VREF)
+.save v(VSS) v(VDD) v(XDUT.VD1) v(XDUT.VR1) v(XDUT.VD2) v(XDUT.OTA_OUT) v(IOUT1) v(VREF) i(v.XDUT.V1)
 *.save all
 #endifmak
 

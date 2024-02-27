@@ -309,6 +309,10 @@ N 80 560 90 560 {
 lab=VSS}
 N 70 560 80 560 {
 lab=VSS}
+N 340 110 340 210 {
+lab=I_OUT1}
+N 340 270 340 560 {
+lab=VSS}
 C {devices/iopin.sym} -470 -160 0 1 {name=p1 lab=VDD}
 C {devices/iopin.sym} -470 560 0 1 {name=p4 lab=VSS}
 C {devices/lab_wire.sym} 1040 120 0 0 {name=p6 sig_type=std_logic lab=VSS}
@@ -323,7 +327,7 @@ C {devices/lab_wire.sym} -260 320 0 0 {name=p2 sig_type=std_logic lab=VD1}
 C {devices/lab_wire.sym} 70 310 0 0 {name=p3 sig_type=std_logic lab=VR1}
 C {devices/lab_wire.sym} 70 440 0 0 {name=p5 sig_type=std_logic lab=VD2}
 C {devices/lab_wire.sym} -150 -90 0 0 {name=p8 sig_type=std_logic lab=OTA_OUT}
-C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C1F2.sym} 300 -90 0 0 {name=x3[20:0]}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C1F2.sym} 300 -90 0 0 {name=x3}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C1F2.sym} 30 -90 0 0 {name=x2[20:0]}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C1F2.sym} -220 -90 0 1 {name=x5[20:0]}
 C {devices/res.sym} 70 390 0 0 {name=R1
@@ -356,3 +360,4 @@ model=pnp_05v5_W3p40L3p40
 m=5
 spiceprefix=X
 }
+C {devices/vsource.sym} 340 240 0 0 {name=V1 value=0 savecurrent=false}
