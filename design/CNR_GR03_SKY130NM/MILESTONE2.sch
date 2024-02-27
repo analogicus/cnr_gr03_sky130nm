@@ -5,8 +5,6 @@ K {}
 V {}
 S {}
 E {}
-N 120 -30 120 -10 {
-lab=VREF_I}
 N 120 -10 140 -10 {
 lab=VREF_I}
 N 140 -10 160 -10 {
@@ -43,8 +41,6 @@ N -220 50 -200 50 {
 lab=I_IN}
 N -220 170 -200 170 {
 lab=VSS}
-N 120 -130 120 -90 {
-lab=VREF_I}
 N 320 110 320 170 {
 lab=VSS}
 N 310 170 320 170 {
@@ -53,10 +49,6 @@ N 160 140 230 140 {
 lab=VDD}
 N 320 -130 320 -100 {
 lab=VDD}
-N 120 -90 120 -30 {
-lab=VREF_I}
-N 80 -130 120 -130 {
-lab=VREF_I}
 N -180 50 -170 50 {
 lab=I_IN}
 N -110 50 -60 50 {
@@ -67,6 +59,8 @@ N 160 70 160 80 {
 lab=#net1}
 N -170 50 -110 50 {
 lab=I_IN}
+N 100 -10 120 -10 {}
+N 90 -10 100 -10 {}
 C {devices/capa.sym} 80 100 0 0 {name=C1
 m=1
 value=8p
@@ -79,7 +73,7 @@ C {devices/iopin.sym} 480 20 0 0 {name=OUT lab=OUT
 }
 C {devices/iopin.sym} -220 50 2 0 {name=I_IN lab=I_IN
 }
-C {devices/iopin.sym} 80 -130 2 0 {name=VREF_I lab=VREF_I
+C {devices/iopin.sym} 90 -10 2 0 {name=VREF_I lab=VREF_I
 }
 C {devices/iopin.sym} 320 -130 3 0 {name=VDD lab=VDD
 }

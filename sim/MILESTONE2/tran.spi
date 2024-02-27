@@ -28,7 +28,7 @@ VDD  VDD_1V8 VSS dc 1.8
 VRST RST VSS PULSE(0 1.8 0.0 2NS 2NS 75NS 275NS)
 *VRST RST VSS dc 0
 IIN VSS I_IN dc 60u
-VREF VREF_I VSS dc 1.0
+VREF VREF_I VSS dc 1.2
 
 *-----------------------------------------------------------------
 * DUT

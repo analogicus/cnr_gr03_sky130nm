@@ -55,14 +55,6 @@ N -470 560 -260 560 {
 lab=VSS}
 N -260 560 70 560 {
 lab=VSS}
-N 340 -60 340 170 {
-lab=I_OUT1}
-N 340 230 340 560 {
-lab=VSS}
-N 80 560 340 560 {
-lab=VSS}
-N 70 560 80 560 {
-lab=VSS}
 N -310 -90 -260 -90 {
 lab=VDD}
 N -310 -160 -310 -90 {
@@ -130,9 +122,9 @@ lab=OTA_OUT}
 N 440 -90 490 -90 {
 lab=OTA_OUT}
 N 530 -50 530 0 {
-lab=I_OUT2}
+lab=VREF}
 N 530 0 580 0 {
-lab=I_OUT2}
+lab=VREF}
 N 530 -90 580 -90 {
 lab=VDD}
 N 580 -160 580 -90 {
@@ -140,24 +132,193 @@ lab=VDD}
 N 530 -160 580 -160 {
 lab=VDD}
 N 530 -60 530 -50 {
-lab=I_OUT2}
+lab=VREF}
 N -100 490 -100 540 {
 lab=IBIAS}
 N -100 380 -100 430 {
 lab=VDD}
-N 340 110 390 110 {
+N 340 -60 340 -20 {
 lab=I_OUT1}
+N 340 -20 340 -10 {
+lab=I_OUT1}
+N 340 -10 340 -0 {
+lab=I_OUT1}
+N 340 0 340 10 {
+lab=I_OUT1}
+N 340 10 340 20 {
+lab=I_OUT1}
+N 340 20 340 30 {
+lab=I_OUT1}
+N 340 30 340 40 {
+lab=I_OUT1}
+N 340 40 340 50 {
+lab=I_OUT1}
+N 340 50 340 60 {
+lab=I_OUT1}
+N 340 60 340 70 {
+lab=I_OUT1}
+N 340 70 340 80 {
+lab=I_OUT1}
+N 340 80 340 90 {
+lab=I_OUT1}
+N 340 90 340 100 {
+lab=I_OUT1}
+N 340 100 340 110 {
+lab=I_OUT1}
+N 340 110 360 110 {
+lab=I_OUT1}
+N 530 -0 530 30 {
+lab=VREF}
+N 530 30 530 40 {
+lab=VREF}
+N 530 40 530 50 {
+lab=VREF}
+N 530 50 530 60 {
+lab=VREF}
+N 530 60 530 70 {
+lab=VREF}
+N 530 70 530 80 {
+lab=VREF}
+N 530 340 530 350 {
+lab=VREF}
+N 530 350 530 360 {
+lab=VREF}
+N 530 420 530 470 {
+lab=#net1}
+N 530 470 530 480 {
+lab=#net1}
+N 530 320 530 340 {
+lab=VREF}
+N 530 310 530 320 {
+lab=VREF}
+N 530 300 530 310 {
+lab=VREF}
+N 530 290 530 300 {
+lab=VREF}
+N 530 280 530 290 {
+lab=VREF}
+N 530 270 530 280 {
+lab=VREF}
+N 530 260 530 270 {
+lab=VREF}
+N 530 250 530 260 {
+lab=VREF}
+N 530 240 530 250 {
+lab=VREF}
+N 530 230 530 240 {
+lab=VREF}
+N 530 220 530 230 {
+lab=VREF}
+N 530 210 530 220 {
+lab=VREF}
+N 530 200 530 210 {
+lab=VREF}
+N 530 190 530 200 {
+lab=VREF}
+N 530 180 530 190 {
+lab=VREF}
+N 530 170 530 180 {
+lab=VREF}
+N 530 160 530 170 {
+lab=VREF}
+N 530 120 530 160 {
+lab=VREF}
+N 530 110 530 120 {
+lab=VREF}
+N 530 100 530 110 {
+lab=VREF}
+N 530 80 530 100 {
+lab=VREF}
+N 470 510 490 510 {
+lab=VSS}
+N 470 510 470 530 {
+lab=VSS}
+N 470 530 470 540 {
+lab=VSS}
+N 470 540 470 550 {
+lab=VSS}
+N 470 550 470 560 {
+lab=VSS}
+N 470 560 530 560 {
+lab=VSS}
+N 530 540 530 560 {
+lab=VSS}
+N 400 560 470 560 {
+lab=VSS}
+N 390 560 400 560 {
+lab=VSS}
+N 380 560 390 560 {
+lab=VSS}
+N 370 560 380 560 {
+lab=VSS}
+N 360 560 370 560 {
+lab=VSS}
+N 350 560 360 560 {
+lab=VSS}
+N 340 560 350 560 {
+lab=VSS}
+N 330 560 340 560 {
+lab=VSS}
+N 320 560 330 560 {
+lab=VSS}
+N 310 560 320 560 {
+lab=VSS}
+N 300 560 310 560 {
+lab=VSS}
+N 290 560 300 560 {
+lab=VSS}
+N 280 560 290 560 {
+lab=VSS}
+N 270 560 280 560 {
+lab=VSS}
+N 260 560 270 560 {
+lab=VSS}
+N 250 560 260 560 {
+lab=VSS}
+N 240 560 250 560 {
+lab=VSS}
+N 220 560 240 560 {
+lab=VSS}
+N 210 560 220 560 {
+lab=VSS}
+N 200 560 210 560 {
+lab=VSS}
+N 190 560 200 560 {
+lab=VSS}
+N 180 560 190 560 {
+lab=VSS}
+N 170 560 180 560 {
+lab=VSS}
+N 160 560 170 560 {
+lab=VSS}
+N 150 560 160 560 {
+lab=VSS}
+N 140 560 150 560 {
+lab=VSS}
+N 130 560 140 560 {
+lab=VSS}
+N 120 560 130 560 {
+lab=VSS}
+N 110 560 120 560 {
+lab=VSS}
+N 100 560 110 560 {
+lab=VSS}
+N 90 560 100 560 {
+lab=VSS}
+N 80 560 90 560 {
+lab=VSS}
+N 70 560 80 560 {
+lab=VSS}
 C {devices/iopin.sym} -470 -160 0 1 {name=p1 lab=VDD}
 C {devices/iopin.sym} -470 560 0 1 {name=p4 lab=VSS}
-C {devices/vsource.sym} 340 200 0 0 {name=V0 value=0 savecurrent=false}
 C {devices/lab_wire.sym} 1040 120 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 930 360 1 0 {name=p12 sig_type=std_logic lab=IBIAS}
 C {devices/lab_wire.sym} 850 340 1 0 {name=p13 sig_type=std_logic lab=VR1}
 C {devices/lab_wire.sym} 910 340 1 0 {name=p14 sig_type=std_logic lab=VD1}
 C {devices/lab_wire.sym} 730 120 0 0 {name=p15 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 880 -80 0 0 {name=p16 sig_type=std_logic lab=OTA_OUT}
-C {devices/iopin.sym} 390 110 0 0 {name=I_OUT1 lab=I_OUT1}
-C {devices/iopin.sym} 580 0 0 0 {name=I_OUT2 lab=I_OUT2}
+C {devices/iopin.sym} 360 110 0 0 {name=I_OUT1 lab=I_OUT1}
+C {devices/iopin.sym} 580 0 0 0 {name=VREF lab=VREF}
 C {devices/lab_wire.sym} -260 320 0 0 {name=p2 sig_type=std_logic lab=VD1}
 C {devices/lab_wire.sym} 70 310 0 0 {name=p3 sig_type=std_logic lab=VR1}
 C {devices/lab_wire.sym} 70 440 0 0 {name=p5 sig_type=std_logic lab=VD2}
@@ -185,3 +346,13 @@ C {CNR_GR03_SKY130NM/CM_OTA_NCH.sym} 880 90 3 0 {name=x1}
 C {devices/isource.sym} -100 460 0 0 {name=I0 value=2u}
 C {devices/lab_wire.sym} -100 400 0 0 {name=p7 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} -100 530 1 0 {name=p9 sig_type=std_logic lab=IBIAS}
+C {devices/res.sym} 530 390 0 0 {name=R2
+value=11.5k
+footprint=1206
+device=resistor
+m=1}
+C {sky130_fd_pr/pnp_05v5.sym} 510 510 0 0 {name=Q3
+model=pnp_05v5_W3p40L3p40
+m=5
+spiceprefix=X
+}
