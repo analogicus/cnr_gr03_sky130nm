@@ -81,7 +81,6 @@ option TEMP=125
 tran 100n 100u 30u
 write {cicname}_125.raw
 
-
 exit
 
 .endc
