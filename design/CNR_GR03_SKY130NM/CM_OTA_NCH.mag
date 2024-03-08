@@ -1,0 +1,12 @@
+magic
+tech sky130B
+timestamp 1709894422
+use CNRATR_NCH_2C8F0  CNRATR_NCH_2C8F0_0 ~/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM
+timestamp 1695852000
+transform 1 0 823 0 1 8
+box -92 -62 668 796
+use CNRATR_NCH_2C8F0  CNRATR_NCH_2C8F0_1
+timestamp 1695852000
+transform 1 0 -2 0 1 10
+box -92 -62 668 796
+<< end >>
