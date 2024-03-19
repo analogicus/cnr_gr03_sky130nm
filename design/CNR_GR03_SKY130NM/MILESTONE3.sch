@@ -5,24 +5,32 @@ K {}
 V {}
 S {}
 E {}
-N 980 -410 1020 -410 {
-lab=RST_CAP}
-N 1020 -410 1020 -260 {
-lab=RST_CAP}
-N 240 -260 1020 -260 {
-lab=RST_CAP}
-N 240 -390 240 -260 {
-lab=RST_CAP}
-N 240 -390 300 -390 {
-lab=RST_CAP}
-N 1020 -590 1050 -590 {
-lab=RST_CAP}
-N 1020 -590 1020 -410 {
-lab=RST_CAP}
 N 600 -410 760 -410 {
 lab=#net1}
-N 1020 -410 1140 -410 {
-lab=RST_CAP}
+N 1200 -860 1250 -860 {
+lab=OFFSET[10,9,1,0]}
+N 1200 -780 1250 -780 {
+lab=OFFSET[8,7,6,5,4,3,2]}
+N 1360 -410 1520 -410 {
+lab=#net2}
+N 1520 -420 1520 -410 {
+lab=#net2}
+N 1520 -420 1540 -420 {
+lab=#net2}
+N 980 -410 1140 -410 {
+lab = COUNTER_Q[10:0]}
+N 1040 -410 1040 -250 {
+lab=COUNTER_Q[10:0]}
+N 240 -250 1040 -250 {
+lab=COUNTER_Q[10:0]}
+N 240 -390 240 -250 {
+lab=COUNTER_Q[10:0]}
+N 240 -390 300 -390 {
+lab=COUNTER_Q[10:0]}
+N 1200 -710 1260 -710 {
+lab= RST_CAP}
+N 1200 -640 1260 -640 {
+lab=OUT[7:0]}
 C {CNR_GR03_SKY130NM/11_BIT_ADDER.sym} 450 -390 0 0 {name=x1}
 C {devices/iopin.sym} 120 -140 2 0 {name=p1 lab=VDD}
 C {devices/iopin.sym} 120 -120 2 0 {name=p2 lab=VSS}
@@ -42,8 +50,16 @@ C {devices/iopin.sym} 140 -690 2 0 {name=p12 lab=RST_CAP}
 C {devices/iopin.sym} 140 -660 2 0 {name=p13 lab=CLK}
 C {devices/lab_pin.sym} 760 -370 0 0 {name=p14 sig_type=std_logic lab=CLK}
 C {devices/lab_pin.sym} 1140 -370 0 0 {name=p15 sig_type=std_logic lab=OTA_IN}
-C {devices/lab_pin.sym} 1050 -590 2 0 {name=p16 sig_type=std_logic lab=RST_CAP}
-C {devices/iopin.sym} 140 -630 2 0 {name=p17 lab=OFFSET}
-C {devices/lab_pin.sym} 1540 -420 0 0 {name=p18 sig_type=std_logic lab=OFFSET}
-C {devices/iopin.sym} 140 -600 2 0 {name=p19 lab=OUT}
-C {devices/lab_pin.sym} 1840 -410 2 0 {name=p20 sig_type=std_logic lab=OUT}
+C {devices/lab_pin.sym} 1260 -710 2 0 {name=p16 sig_type=std_logic lab=RST_CAP}
+C {devices/lab_pin.sym} 1540 -390 0 0 {name=p18 sig_type=std_logic lab=OFFSET[10:0]}
+C {devices/iopin.sym} 140 -630 2 0 {name=p19 lab=OUT[7:0]}
+C {devices/lab_pin.sym} 1260 -640 2 0 {name=p20 sig_type=std_logic lab=OUT[7:0]}
+C {devices/lab_pin.sym} 300 -420 0 0 {name=p21 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 1200 -860 0 0 {name=p17 sig_type=std_logic lab=OFFSET[10,9,1,0]}
+C {devices/lab_pin.sym} 1200 -780 0 0 {name=p22 sig_type=std_logic lab=OFFSET[8,7,6,5,4,3,2]}
+C {devices/lab_pin.sym} 1250 -860 2 0 {name=p23 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 1250 -780 2 0 {name=p24 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1040 -250 2 0 {name=p25 sig_type=std_logic lab=COUNTER_Q[10:0]}
+C {devices/lab_pin.sym} 1200 -710 0 0 {name=p26 sig_type=std_logic lab=COUNTER_Q[10]}
+C {devices/lab_pin.sym} 1840 -410 2 0 {name=p27 sig_type=std_logic lab=SUM[10:0]}
+C {devices/lab_pin.sym} 1200 -640 0 0 {name=p28 sig_type=std_logic lab=SUM[7:0]}
