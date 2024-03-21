@@ -13,7 +13,7 @@ Vlng::Vlng(VerilatedContext* _vcontextp__, const char* _vcname__)
     , in{vlSymsp->TOP.in}
     , rst{vlSymsp->TOP.rst}
     , rst_cap{vlSymsp->TOP.rst_cap}
-    , register_out{vlSymsp->TOP.register_out}
+    , data_out{vlSymsp->TOP.data_out}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

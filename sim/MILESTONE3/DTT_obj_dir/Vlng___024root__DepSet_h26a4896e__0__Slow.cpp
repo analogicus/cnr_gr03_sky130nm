@@ -79,8 +79,9 @@ VL_ATTR_COLD void Vlng___024root___stl_sequent__TOP__0(Vlng___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___stl_sequent__TOP__0\n"); );
     // Body
     vlSelf->rst_cap = (1U & ((IData)(vlSelf->TTD__DOT__counter) 
-                             >> 8U));
-    vlSelf->register_out = vlSelf->TTD__DOT__register_temp;
+                             >> 0xaU));
+    vlSelf->data_out = (0xffU & ((IData)(vlSelf->TTD__DOT__register_temp) 
+                                 - (IData)(0xfdU)));
 }
 
 VL_ATTR_COLD void Vlng___024root___eval_stl(Vlng___024root* vlSelf) {
@@ -155,9 +156,9 @@ VL_ATTR_COLD void Vlng___024root___ctor_var_reset(Vlng___024root* vlSelf) {
     vlSelf->clk = VL_RAND_RESET_I(1);
     vlSelf->in = VL_RAND_RESET_I(1);
     vlSelf->rst_cap = VL_RAND_RESET_I(1);
-    vlSelf->register_out = VL_RAND_RESET_I(8);
-    vlSelf->TTD__DOT__counter = VL_RAND_RESET_I(9);
-    vlSelf->TTD__DOT__register_temp = VL_RAND_RESET_I(8);
+    vlSelf->data_out = VL_RAND_RESET_I(8);
+    vlSelf->TTD__DOT__counter = VL_RAND_RESET_I(11);
+    vlSelf->TTD__DOT__register_temp = VL_RAND_RESET_I(11);
     vlSelf->__Vtrigprevexpr___TOP__clk__0 = VL_RAND_RESET_I(1);
     vlSelf->__Vtrigprevexpr___TOP__in__0 = VL_RAND_RESET_I(1);
 }

@@ -28,7 +28,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vlng VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&in,0,0);
     VL_IN8(&rst,0,0);
     VL_OUT8(&rst_cap,0,0);
-    VL_OUT8(&register_out,7,0);
+    VL_OUT8(&data_out,7,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

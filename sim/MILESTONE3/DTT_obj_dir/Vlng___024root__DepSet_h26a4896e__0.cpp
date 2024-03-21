@@ -16,12 +16,9 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) 
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___nba_sequent__TOP__0\n"); );
     // Body
-    vlSelf->TTD__DOT__register_temp = ((0x80U & ((~ 
-                                                  ((IData)(vlSelf->TTD__DOT__counter) 
-                                                   >> 7U)) 
-                                                 << 7U)) 
-                                       | (0x7fU & (IData)(vlSelf->TTD__DOT__counter)));
-    vlSelf->register_out = vlSelf->TTD__DOT__register_temp;
+    vlSelf->TTD__DOT__register_temp = vlSelf->TTD__DOT__counter;
+    vlSelf->data_out = (0xffU & ((IData)(vlSelf->TTD__DOT__register_temp) 
+                                 - (IData)(0xfdU)));
 }
 
 VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__1(Vlng___024root* vlSelf) {
@@ -30,11 +27,11 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__1(Vlng___024root* vlSelf) 
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___nba_sequent__TOP__1\n"); );
     // Body
     vlSelf->TTD__DOT__counter = ((IData)(vlSelf->rst)
-                                  ? 0x1ffU : (0x1ffU 
+                                  ? 0x7ffU : (0x7ffU 
                                               & ((IData)(vlSelf->TTD__DOT__counter) 
                                                  - (IData)(1U))));
     vlSelf->rst_cap = (1U & ((IData)(vlSelf->TTD__DOT__counter) 
-                             >> 8U));
+                             >> 0xaU));
 }
 
 void Vlng___024root___eval_nba(Vlng___024root* vlSelf) {
