@@ -15,13 +15,13 @@ module tb_data_path;
 
     // Instantiate the Unit Under Test (UUT)
     TTD #(
-        .WIDTH(TIMER_BITS + 1) // Plus one because the internal counter in Data_path has an additional bit for counting
+        //.WIDTH(TIMER_BITS + 1) // Plus one because the internal counter in Data_path has an additional bit for counting
     ) uut (
         .clk(clk),
         .rst(rst),
         .in(in),
         .rst_cap(rst_cap),
-        .register_out(register_out)
+        .data_out(register_out)
     );
 
     // Clock generation
@@ -38,25 +38,17 @@ module tb_data_path;
 
         //check max temp
         wait(rst_cap == 0);
-        #3_260; // Simulate a changing charge time
-        in = 1;
-        wait(rst_cap == 1);
-        in = 0;
-        
-        //check middle
-        wait(rst_cap == 0);
-        #4_305; // Simulate a changing charge time
+        #9_746; // Simulate a changing charge time
         in = 1;
         wait(rst_cap == 1);
         in = 0;
         
         //check min temp
         wait(rst_cap == 0);
-        #5_350; // Simulate a changing charge time
+        #13_862; // Simulate a changing charge time
         in = 1;
         wait(rst_cap == 1);
         in = 0;
-        
         // End the simulation
         #10_000;
         $finish;
