@@ -26,13 +26,14 @@
 VSS  VSS  0 dc 0
 VDD  VDD_1V8  VSS  dc 1.8
 VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 25US)
+VCLK VCLK VSS PULSE(0 1.8 0.0 2NS 2NS 12.5US 25US)
 *VRST VRST VSS dc 0
 
 
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
-XDUT VDD_1V8 VSS VOUT VRST TOPLEVEL
+XDUT VDD_1V8 VSS VOUT VRST VRST2 VDOUT TOPLEVEL
 
 *----------------------------------------------------------------
 * MEASURES
@@ -45,7 +46,7 @@ XDUT VDD_1V8 VSS VOUT VRST TOPLEVEL
 
 *.save all
 *TOPLEVEL values
-.save v(VOUT) v(VRST) v(XDUT.VREF) v(XDUT.I_PTAT) 
+.save v(VOUT) v(VRST) v(VCLK) v(VRST2) v(XDUT.VREF) v(XDUT.I_PTAT) v(VDOUT)
 
 *Milestone 1 values
 .save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1) v()
@@ -59,23 +60,24 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 10n 10u 0
+*optran 0 0 0 10n 10u 0
+optran 0 0 0 1000n 10u 0
 
-option TEMP=-40
-tran 100n 100u 30u
-write {cicname}_-40.raw
+*option TEMP=-40
+*tran 100n 100u 30u
+*write {cicname}_-40.raw
 
-option TEMP=0
-tran 100n 100u 30u
-write {cicname}_0.raw
+*option TEMP=0
+*tran 100n 100u 30u
+*write {cicname}_0.raw
 
-option TEMP=27
-tran 100n 100u 30u
-write {cicname}_27.raw
+*option TEMP=27
+*tran 100n 100u 30u
+*write {cicname}_27.raw
 
-option TEMP=75
-tran 100n 100u 30u
-write {cicname}_75.raw
+*option TEMP=75
+*tran 100n 100u 30u
+*write {cicname}_75.raw
 
 option TEMP=125
 tran 100n 100u 30u

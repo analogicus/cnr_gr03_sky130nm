@@ -213,6 +213,30 @@ N 340 -130 400 -130 {
 lab=VOUT}
 N 340 -100 400 -100 {
 lab=VRST}
+N 520 -110 610 -110 {
+lab=VOUT}
+N 520 -150 520 -110 {
+lab=VOUT}
+N 380 -150 520 -150 {
+lab=VOUT}
+N 380 -150 380 -130 {
+lab=VOUT}
+N 40 -220 610 -220 {
+lab=VDD}
+N 610 -220 610 -150 {
+lab=VDD}
+N 40 30 610 30 {
+lab=VSS}
+N 610 -40 610 30 {
+lab=VSS}
+N 910 -100 940 -100 {
+lab=VDOUT[7:0]}
+N 570 -80 610 -80 {
+lab=VRST2}
+N 750 40 760 40 {
+lab=VCLK}
+N 760 0 760 40 {
+lab=VCLK}
 C {CNR_GR03_SKY130NM/MILESTONE1.sym} -190 -120 0 0 {name=x1}
 C {CNR_GR03_SKY130NM/MILESTONE2.sym} 190 -100 0 0 {name=x2}
 C {devices/ipin.sym} -380 -220 0 0 {name=p1 lab=VDD}
@@ -221,3 +245,7 @@ C {devices/opin.sym} 400 -130 2 1 {name=p3 lab=VOUT}
 C {devices/ipin.sym} 400 -100 0 1 {name=p4 lab=VRST}
 C {devices/lab_wire.sym} 0 -110 0 0 {name=p5 sig_type=std_logic lab=I_PTAT}
 C {devices/lab_wire.sym} 0 -80 0 0 {name=p6 sig_type=std_logic lab=VREF}
+C {CNR_GR03_SKY130NM/MILESTONE3.sym} 760 -110 0 0 {name=x3}
+C {devices/opin.sym} 930 -100 2 1 {name=p7 lab=VDOUT[7:0]}
+C {devices/opin.sym} 570 -80 0 1 {name=p8 lab=VRST2}
+C {devices/ipin.sym} 760 40 2 1 {name=p9 lab=VCLK}
