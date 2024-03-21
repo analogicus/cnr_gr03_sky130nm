@@ -1,0 +1,89 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/MILESTONE3_ANALOG_lpe.spi
+#else
+.include ../../../work/xsch/TOPLEVEL.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+
+*.param AVDD = {vdda}
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0 dc 0
+VDD  VDD_1V8  VSS  dc 1.8
+CLK CLK VSS PULSE(0 1.8 0.0 2NS 2NS 10US 20US)
+*VRST VRST VSS dc 0
+
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+XDUT TOPLEVEL VDD_1V8 VSS CLK DOUT
+
+*----------------------------------------------------------------
+* MEASURES
+*----------------------------------------------------------------
+
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+
+*.save all
+*Milestone 3 toplevel values
+.save v(DOUT[7:0]) v(CLK) 
+*.save v(XDUT.VREF) v(XDUT.I_PTAT) 
+
+*Milestone 1 values
+*.save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1) v()
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+optran 0 0 0 10n 10u 0
+
+option TEMP=-40
+tran 100n 100u 30u
+write {cicname}_-40.raw
+
+option TEMP=0
+tran 100n 100u 30u
+write {cicname}_0.raw
+
+option TEMP=27
+tran 100n 100u 30u
+write {cicname}_27.raw
+
+option TEMP=75
+tran 100n 100u 30u
+write {cicname}_75.raw
+
+option TEMP=125
+tran 100n 100u 30u
+write {cicname}_125.raw
+
+exit
+
+.endc
+
+.end
