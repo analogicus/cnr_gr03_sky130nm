@@ -241,24 +241,24 @@ C {devices/iopin.sym} 1740 -250 0 1 {name=p7 lab=VDD}
 C {devices/iopin.sym} 2430 90 0 0 {name=p8 lab=VIN}
 C {devices/iopin.sym} 2040 90 0 1 {name=p9 lab=VIP}
 C {devices/iopin.sym} 1710 490 0 1 {name=p10 lab=VSS}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_2C8F0.sym} 2080 90 0 0 {name=x10}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_2C8F0.sym} 2390 90 0 1 {name=x11}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 2210 250 0 0 {name=x12 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_2C8F0.sym} 2080 90 0 0 {name=x10}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_2C8F0.sym} 2390 90 0 1 {name=x11}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 2210 250 0 0 {name=x12 }
 C {devices/iopin.sym} 1070 150 1 1 {name=p11 lab=IBIAS}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 2080 -170 0 0 {name=x14}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 2390 -170 0 1 {name=x15}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 2540 -170 0 0 {name=x16}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 2540 260 0 0 {name=x17}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 2770 260 0 0 {name=x18}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 2080 -170 0 0 {name=x14}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 2390 -170 0 1 {name=x15}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 2540 -170 0 0 {name=x16}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 2540 260 0 0 {name=x17}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 2770 260 0 0 {name=x18}
 C {devices/lab_wire.sym} 2230 90 0 0 {name=l2 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 2210 120 0 0 {name=l4 sig_type=std_logic lab=VS}
 C {devices/lab_pin.sym} 2230 -30 3 1 {name=l5 sig_type=std_logic lab=VB2}
 C {devices/lab_pin.sym} 2080 250 2 1 {name=l7 sig_type=std_logic lab=IBIAS}
 C {devices/iopin.sym} 2970 50 0 0 {name=p12 lab=VOUT}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_4C2F0.sym} 2620 -30 0 1 {name=x11[1:0]}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C2F0.sym} 2620 -30 0 1 {name=x11[1:0]}
 C {devices/lab_pin.sym} 2690 -30 3 1 {name=l8 sig_type=std_logic lab=VB2}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 2850 -170 0 1 {name=x19}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C2F0.sym} 2620 120 0 1 {name=x16[4:0]}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C8F0.sym} 2850 -170 0 1 {name=x19}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C2F0.sym} 2620 120 0 1 {name=x16[4:0]}
 C {devices/lab_pin.sym} 2690 120 3 1 {name=l9 sig_type=std_logic lab=VB1}
 C {devices/lab_wire.sym} 2630 260 0 0 {name=l10 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 2880 260 0 0 {name=l11 sig_type=std_logic lab=VSS}
@@ -271,13 +271,13 @@ C {devices/lab_wire.sym} 2870 120 0 0 {name=l18 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 2010 -170 0 0 {name=l19 sig_type=std_logic lab=VG1}
 C {devices/lab_wire.sym} 2920 -170 0 0 {name=l20 sig_type=std_logic lab=VG1}
 C {devices/lab_wire.sym} 2500 -170 0 0 {name=l21 sig_type=std_logic lab=VG2}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 1290 0 0 1 {name=x20}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 1110 260 0 1 {name=x21 }
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 1210 260 0 0 {name=x22 }
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 1390 260 0 0 {name=x23 }
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_2C12F0.sym} 1530 260 0 0 {name=x24 }
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 1530 0 0 0 {name=x25}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_4C12F0.sym} 1390 60 0 0 {name=x26}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 1290 0 0 1 {name=x20}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 1110 260 0 1 {name=x21 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 1210 260 0 0 {name=x22 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C8F0.sym} 1390 260 0 0 {name=x23 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_2C12F0.sym} 1530 260 0 0 {name=x24 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 1530 0 0 0 {name=x25}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C12F0.sym} 1390 60 0 0 {name=x26}
 C {devices/lab_wire.sym} 1250 -60 0 0 {name=l22 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 1180 320 0 0 {name=l23 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1390 110 2 1 {name=l25 sig_type=std_logic lab=VB2}
@@ -290,7 +290,7 @@ C {devices/lab_pin.sym} 2580 -100 2 1 {name=l31 sig_type=std_logic lab=V5}
 C {devices/lab_pin.sym} 2810 -100 2 1 {name=l32 sig_type=std_logic lab=V6}
 C {devices/lab_pin.sym} 2580 200 2 1 {name=l33 sig_type=std_logic lab=V7}
 C {devices/lab_pin.sym} 2810 200 2 1 {name=l34 sig_type=std_logic lab=V8}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_NCH_4C2F0.sym} 2770 120 0 0 {name=x15[4:0]}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym} 2160 -30 0 1 {name=x27}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym} 2310 -30 0 0 {name=x28}
-C {/home/ocheid/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM/CNRATR_PCH_4C2F0.sym} 2770 -30 0 0 {name=x12[1:0]}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C2F0.sym} 2770 120 0 0 {name=x15[4:0]}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym} 2160 -30 0 1 {name=x27}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym} 2310 -30 0 0 {name=x28}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C2F0.sym} 2770 -30 0 0 {name=x12[1:0]}
