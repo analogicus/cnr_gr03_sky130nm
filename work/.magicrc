@@ -1,3 +1,6 @@
 source ../tech/magic/.magicrc
 addpath ../design/RPLY_MILESTONE1_SKY130NM
 addpath ../design/CNR_ATR_SKY130NM
+addpath ../design/SUN_SAR9B_SKY130NM
+addpath ../design/RPLY_BIAS_SKY130NM
+
