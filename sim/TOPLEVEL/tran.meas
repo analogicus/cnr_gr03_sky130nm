@@ -1,6 +1,6 @@
 * Measure TOPLEVEL
 .control
-load {cicname}_-40.raw
+load {cicname}_125.raw
 
 
 
@@ -17,9 +17,7 @@ meas tran d2 FIND v(d2) WHEN v(vout)=1.5 CROSS=LAST
 meas tran d1 FIND v(d1) WHEN v(vout)=1.5 CROSS=LAST
 meas tran d0 FIND v(d0) WHEN v(vout)=1.5 CROSS=LAST
 
-if d7=3.3
-d7=1
-end
+
 
 echo "MEAS_END"
 
