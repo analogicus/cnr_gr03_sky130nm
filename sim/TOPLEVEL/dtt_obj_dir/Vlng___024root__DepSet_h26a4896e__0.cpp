@@ -11,6 +11,22 @@ void Vlng___024root___eval_act(Vlng___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_act\n"); );
 }
 
+void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf);
+void Vlng___024root___nba_sequent__TOP__1(Vlng___024root* vlSelf);
+
+void Vlng___024root___eval_nba(Vlng___024root* vlSelf) {
+    (void)vlSelf;  // Prevent unused variable warning
+    Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_nba\n"); );
+    // Body
+    if ((2ULL & vlSelf->__VnbaTriggered.word(0U))) {
+        Vlng___024root___nba_sequent__TOP__0(vlSelf);
+    }
+    if ((1ULL & vlSelf->__VnbaTriggered.word(0U))) {
+        Vlng___024root___nba_sequent__TOP__1(vlSelf);
+    }
+}
+
 VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__0(Vlng___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
@@ -32,19 +48,6 @@ VL_INLINE_OPT void Vlng___024root___nba_sequent__TOP__1(Vlng___024root* vlSelf) 
                                                  - (IData)(1U))));
     vlSelf->rst_cap = (1U & ((IData)(vlSelf->TTD__DOT__counter) 
                              >> 0xaU));
-}
-
-void Vlng___024root___eval_nba(Vlng___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_nba\n"); );
-    // Body
-    if ((2ULL & vlSelf->__VnbaTriggered.word(0U))) {
-        Vlng___024root___nba_sequent__TOP__0(vlSelf);
-    }
-    if ((1ULL & vlSelf->__VnbaTriggered.word(0U))) {
-        Vlng___024root___nba_sequent__TOP__1(vlSelf);
-    }
 }
 
 void Vlng___024root___eval_triggers__act(Vlng___024root* vlSelf);
@@ -104,7 +107,7 @@ void Vlng___024root___eval(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vlng___024root___dump_triggers__nba(vlSelf);
 #endif
-            VL_FATAL_MT("/home/vetlehaa/aicex/ip/cnr_gr03_sky130nm/sim/MILESTONE3_VERILOG/dtt.v", 3, "", "NBA region did not converge.");
+            VL_FATAL_MT("dtt.v", 3, "", "NBA region did not converge.");
         }
         __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
         __VnbaContinue = 0U;
@@ -115,7 +118,7 @@ void Vlng___024root___eval(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vlng___024root___dump_triggers__act(vlSelf);
 #endif
-                VL_FATAL_MT("/home/vetlehaa/aicex/ip/cnr_gr03_sky130nm/sim/MILESTONE3_VERILOG/dtt.v", 3, "", "Active region did not converge.");
+                VL_FATAL_MT("dtt.v", 3, "", "Active region did not converge.");
             }
             vlSelf->__VactIterCount = ((IData)(1U) 
                                        + vlSelf->__VactIterCount);

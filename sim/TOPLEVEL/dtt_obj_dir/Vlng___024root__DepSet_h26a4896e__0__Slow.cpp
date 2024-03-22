@@ -47,7 +47,7 @@ VL_ATTR_COLD void Vlng___024root___eval_settle(Vlng___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vlng___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("/home/vetlehaa/aicex/ip/cnr_gr03_sky130nm/sim/MILESTONE3_VERILOG/dtt.v", 3, "", "Settle region did not converge.");
+            VL_FATAL_MT("dtt.v", 3, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;
@@ -64,7 +64,7 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__stl(Vlng___024root* vlSelf) {
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___dump_triggers__stl\n"); );
     // Body
-    if ((1U & (~ (IData)(vlSelf->__VstlTriggered.any())))) {
+    if ((1U & (~ vlSelf->__VstlTriggered.any()))) {
         VL_DBG_MSGF("         No triggers active\n");
     }
     if ((1ULL & vlSelf->__VstlTriggered.word(0U))) {
@@ -72,6 +72,18 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__stl(Vlng___024root* vlSelf) {
     }
 }
 #endif  // VL_DEBUG
+
+VL_ATTR_COLD void Vlng___024root___stl_sequent__TOP__0(Vlng___024root* vlSelf);
+
+VL_ATTR_COLD void Vlng___024root___eval_stl(Vlng___024root* vlSelf) {
+    (void)vlSelf;  // Prevent unused variable warning
+    Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_stl\n"); );
+    // Body
+    if ((1ULL & vlSelf->__VstlTriggered.word(0U))) {
+        Vlng___024root___stl_sequent__TOP__0(vlSelf);
+    }
+}
 
 VL_ATTR_COLD void Vlng___024root___stl_sequent__TOP__0(Vlng___024root* vlSelf) {
     (void)vlSelf;  // Prevent unused variable warning
@@ -82,16 +94,6 @@ VL_ATTR_COLD void Vlng___024root___stl_sequent__TOP__0(Vlng___024root* vlSelf) {
                              >> 0xaU));
     vlSelf->data_out = (0xffU & ((IData)(vlSelf->TTD__DOT__register_temp) 
                                  - (IData)(0xfdU)));
-}
-
-VL_ATTR_COLD void Vlng___024root___eval_stl(Vlng___024root* vlSelf) {
-    (void)vlSelf;  // Prevent unused variable warning
-    Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___eval_stl\n"); );
-    // Body
-    if ((1ULL & vlSelf->__VstlTriggered.word(0U))) {
-        Vlng___024root___stl_sequent__TOP__0(vlSelf);
-    }
 }
 
 VL_ATTR_COLD void Vlng___024root___eval_triggers__stl(Vlng___024root* vlSelf);
@@ -117,7 +119,7 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__act(Vlng___024root* vlSelf) {
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___dump_triggers__act\n"); );
     // Body
-    if ((1U & (~ (IData)(vlSelf->__VactTriggered.any())))) {
+    if ((1U & (~ vlSelf->__VactTriggered.any()))) {
         VL_DBG_MSGF("         No triggers active\n");
     }
     if ((1ULL & vlSelf->__VactTriggered.word(0U))) {
@@ -135,7 +137,7 @@ VL_ATTR_COLD void Vlng___024root___dump_triggers__nba(Vlng___024root* vlSelf) {
     Vlng__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vlng___024root___dump_triggers__nba\n"); );
     // Body
-    if ((1U & (~ (IData)(vlSelf->__VnbaTriggered.any())))) {
+    if ((1U & (~ vlSelf->__VnbaTriggered.any()))) {
         VL_DBG_MSGF("         No triggers active\n");
     }
     if ((1ULL & vlSelf->__VnbaTriggered.word(0U))) {
