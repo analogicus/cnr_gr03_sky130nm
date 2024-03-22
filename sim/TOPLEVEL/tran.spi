@@ -25,7 +25,7 @@
 *-----------------------------------------------------------------
 VSS  VSS  0 dc 0
 VDD  VDD_1V8  VSS  dc 1.8
-clk clk VSS PULSE(0 1.8 0.0 2NS 2NS 12.5NS 25NS)
+Vclk clk VSS PULSE(0 1.8 0.0 2NS 2NS 12.5NS 25NS)
 *VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 25US)
 *VRST VRST VSS dc 0
 
@@ -35,7 +35,7 @@ clk clk VSS PULSE(0 1.8 0.0 2NS 2NS 12.5NS 25NS)
 *-----------------------------------------------------------------
 XDUT VDD_1V8 VSS VOUT VRST TOPLEVEL
 adut [rst clk VOUT] [VRST data_out] null dut
-.model dut d_cosim simulation="./../../../../../sim/MILESTONE3_VERILOG/DTT.so"
+.model dut d_cosim simulation="dtt.so"
 
 *----------------------------------------------------------------
 * MEASURES
@@ -48,10 +48,10 @@ adut [rst clk VOUT] [VRST data_out] null dut
 
 *.save all
 *TOPLEVEL values
-.save v(VOUT) v(VRST) v(XDUT.VREF) v(XDUT.I_PTAT) v(ADUT.data_out)
+.save v(VOUT) v(XDUT.VREF) v(XDUT.I_PTAT) v(VRST)
 
 *Milestone 1 values
-.save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1) v()
+.save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1) 
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -64,21 +64,21 @@ unset askquit
 
 optran 0 0 0 10n 10u 0
 
-option TEMP=-40
-tran 100n 100u 30u
-write {cicname}_-40.raw
+*option TEMP=-40
+*tran 100n 100u 30u
+*write {cicname}_-40.raw
 
-option TEMP=0
-tran 100n 100u 30u
-write {cicname}_0.raw
+*option TEMP=0
+*tran 100n 100u 30u
+*write {cicname}_0.raw
 
-option TEMP=27
-tran 100n 100u 30u
-write {cicname}_27.raw
+*option TEMP=27
+*tran 100n 100u 30u
+*write {cicname}_27.raw
 
-option TEMP=75
-tran 100n 100u 30u
-write {cicname}_75.raw
+*option TEMP=75
+*tran 100n 100u 30u
+*write {cicname}_75.raw
 
 option TEMP=125
 tran 100n 100u 30u
