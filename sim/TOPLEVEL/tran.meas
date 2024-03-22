@@ -1,6 +1,6 @@
 * Measure TOPLEVEL
 .control
-load {cicname}_125.raw
+load {cicname}_-40.raw
 
 
 
