@@ -26,7 +26,7 @@
 VSS  VSS  0 dc 0
 VDD  VDD_1V8  VSS  dc 1.8
 Vclk clk VSS PULSE(0 1.8 0.0 2NS 2NS 12.5NS 25NS)
-VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 25US)
+*VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 25US)
 *VRST VRST VSS dc 0
 Vtest rst VSS dc 0
 
@@ -35,9 +35,10 @@ Vtest rst VSS dc 0
 * DUT
 *-----------------------------------------------------------------
 XDUT VDD_1V8 VSS VOUT VRST TOPLEVEL
-adut [rst clk VOUT] [rst2 d7 d6 d5 d4 d3 d2 d1 d0]  null dut
+adut [clk VOUT rst] [rst2 d7 d6 d5 d4 d3 d2 d1 d0]  null dut
 .model dut d_cosim simulation="../dtt.so"
 
+R11 rst2 VRST 10k
 
 R1 d1 VSS 1M
 R2 d2 VSS 1M
@@ -83,17 +84,17 @@ option TEMP=-40
 tran 100n 100u 30u
 write {cicname}_-40.raw
 
-*option TEMP=0
-*tran 100n 100u 30u
-*write {cicname}_0.raw
+option TEMP=0
+tran 100n 100u 30u
+write {cicname}_0.raw
 
-*option TEMP=27
-*tran 100n 100u 30u
-*write {cicname}_27.raw
+option TEMP=27
+tran 100n 100u 30u
+write {cicname}_27.raw
 
-*option TEMP=75
-*tran 100n 100u 30u
-*write {cicname}_75.raw
+option TEMP=75
+tran 100n 100u 30u
+write {cicname}_75.raw
 
 option TEMP=125
 tran 100n 100u 30u
