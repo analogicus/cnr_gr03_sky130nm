@@ -59,13 +59,10 @@ N 160 70 160 80 {
 lab=#net1}
 N -170 50 -110 50 {
 lab=I_IN}
-N 100 -10 120 -10 {}
-N 90 -10 100 -10 {}
-C {devices/capa.sym} 80 100 0 0 {name=C1
-m=1
-value=8p
-footprint=1206
-device="ceramic capacitor"}
+N 100 -10 120 -10 {
+lab=VREF_I}
+N 90 -10 100 -10 {
+lab=VREF_I}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C2F0.sym} -70 100 0 0 {name=x2 }
 C {devices/iopin.sym} -140 100 2 0 {name=RST lab=RST
 }
@@ -82,3 +79,4 @@ C {devices/iopin.sym} -220 170 2 0 {name=VSS lab=VSS
 C {CNR_GR03_SKY130NM/CM_OTA_NCH.sym} 350 20 0 0 {name=x1}
 C {devices/isource.sym} 160 110 2 0 {name=I1 value=2u}
 C {devices/lab_wire.sym} 220 140 0 0 {name=p3 sig_type=std_logic lab=VDD}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 80 100 0 0 {name=C2 model=cap_mim_m3_1 W=10 L=10 MF=43 spiceprefix=X}

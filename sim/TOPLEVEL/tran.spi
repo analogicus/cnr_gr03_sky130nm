@@ -25,7 +25,7 @@
 *-----------------------------------------------------------------
 VSS  VSS  0 dc 0
 VDD  VDD_1V8  VSS  dc 1.8
-VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 25US)
+VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 50US)
 *VRST VRST VSS dc 0
 
 
@@ -48,7 +48,7 @@ XDUT VDD_1V8 VSS VOUT VRST TOPLEVEL
 .save v(VOUT) v(VRST) v(XDUT.VREF) v(XDUT.I_PTAT) 
 
 *Milestone 1 values
-.save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1) v()
+.save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1)
 
 *----------------------------------------------------------------
 * NGSPICE control

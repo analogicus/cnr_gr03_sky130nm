@@ -778,17 +778,3 @@ use CNRATR_PCH_8C8F0  CNRATR_PCH_8C8F0_3
 timestamp 1695852000
 transform 0 1 -56 -1 0 5692
 box -184 -124 1912 1592
-<< labels >>
-flabel space 1640 380 1860 420 0 FreeSans 800 0 0 0 VIN
-port 8 nsew
-flabel locali -7100 -740 8200 -540 0 FreeSans 800 0 0 0 VSS
-port 10 nsew
-flabel locali -7100 -1050 8200 -850 0 FreeSans 800 0 0 0 VDD
-port 12 nsew
-flabel space 2896 372 3040 436 0 FreeSans 800 0 0 0 IBIAS
-port 13 nsew
-flabel metal2 3806 3301 6974 3339 0 FreeSans 800 0 0 0 VOUT
-port 14 nsew
-flabel space 100 380 320 420 0 FreeSans 800 0 0 0 VIP
-port 11 nsew
-<< end >>
