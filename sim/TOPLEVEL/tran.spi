@@ -26,16 +26,29 @@
 VSS  VSS  0 dc 0
 VDD  VDD_1V8  VSS  dc 1.8
 Vclk clk VSS PULSE(0 1.8 0.0 2NS 2NS 12.5NS 25NS)
-*VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 25US)
+VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 25US)
 *VRST VRST VSS dc 0
+Vtest rst VSS dc 0
 
-
+    
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
 XDUT VDD_1V8 VSS VOUT VRST TOPLEVEL
-adut [rst clk VOUT] [VRST data_out] null dut
-.model dut d_cosim simulation="dtt.so"
+adut [rst clk VOUT] [rst2 d7 d6 d5 d4 d3 d2 d1 d0]  null dut
+.model dut d_cosim simulation="../dtt.so"
+
+
+R1 d1 VSS 1M
+R2 d2 VSS 1M
+R3 d3 VSS 1M
+R4 d4 VSS 1M
+R5 d5 VSS 1M
+R6 d6 VSS 1M
+R7 d7 VSS 1M
+R0 d0 VSS 1M
+
+R10 rst2 VSS 1M
 
 *----------------------------------------------------------------
 * MEASURES
@@ -53,6 +66,8 @@ adut [rst clk VOUT] [VRST data_out] null dut
 *Milestone 1 values
 .save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1) 
 
+.save v(clk) v(d1) v(d2) v(d3) v(d4) v(d5) v(d6) v(d7) v(d0) v(VRST) v(rst2)
+
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
@@ -64,9 +79,9 @@ unset askquit
 
 optran 0 0 0 10n 10u 0
 
-*option TEMP=-40
-*tran 100n 100u 30u
-*write {cicname}_-40.raw
+option TEMP=-40
+tran 100n 100u 30u
+write {cicname}_-40.raw
 
 *option TEMP=0
 *tran 100n 100u 30u
