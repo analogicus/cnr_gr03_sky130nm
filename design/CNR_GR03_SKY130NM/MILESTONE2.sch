@@ -6,9 +6,9 @@ V {}
 S {}
 E {}
 N 120 -10 140 -10 {
-lab=VREF_I}
+lab=I_IN}
 N 140 -10 160 -10 {
-lab=VREF_I}
+lab=I_IN}
 N -200 50 -180 50 {
 lab=I_IN}
 N 80 50 80 70 {
@@ -57,16 +57,23 @@ N 160 70 160 80 {
 lab=#net1}
 N -170 50 -110 50 {
 lab=I_IN}
-N 90 -10 100 -10 {}
-N 100 -10 100 50 {}
-N 100 50 160 50 {}
-N 80 30 80 50 {}
-N 80 30 120 30 {}
-N 120 -10 120 30 {}
-N 40 50 80 50 {}
+N 90 -10 100 -10 {
+lab=VREF_I}
+N 100 -10 100 50 {
+lab=VREF_I}
+N 100 50 160 50 {
+lab=VREF_I}
+N 80 30 80 50 {
+lab=I_IN}
+N 80 30 120 30 {
+lab=I_IN}
+N 120 -10 120 30 {
+lab=I_IN}
+N 40 50 80 50 {
+lab=I_IN}
 C {devices/capa.sym} 80 100 0 0 {name=C1
 m=1
-value=8p
+value=8.8805p
 footprint=1206
 device="ceramic capacitor"}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C2F0.sym} -70 100 0 0 {name=x2 }
