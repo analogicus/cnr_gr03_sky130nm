@@ -280,8 +280,8 @@ C {devices/lab_wire.sym} 850 340 1 0 {name=p13 sig_type=std_logic lab=VR1}
 C {devices/lab_wire.sym} 910 340 1 0 {name=p14 sig_type=std_logic lab=VD1}
 C {devices/lab_wire.sym} 730 120 0 0 {name=p15 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 880 -80 0 0 {name=p16 sig_type=std_logic lab=OTA_OUT}
-C {devices/iopin.sym} 360 110 0 0 {name=I_OUT1 lab=I_OUT1}
-C {devices/iopin.sym} 580 0 0 0 {name=VREF lab=VREF}
+C {devices/iopin.sym} 360 110 0 0 {name=p9 lab=I_OUT1}
+C {devices/iopin.sym} 580 0 0 0 {name=p10 lab=VREF}
 C {devices/lab_wire.sym} -260 320 0 0 {name=p2 sig_type=std_logic lab=VD1}
 C {devices/lab_wire.sym} 70 310 0 0 {name=p3 sig_type=std_logic lab=VR1}
 C {devices/lab_wire.sym} 70 440 0 0 {name=p5 sig_type=std_logic lab=VD2}
