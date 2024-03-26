@@ -6,7 +6,6 @@ output_*/
 *.log
 work/
 .DS_store
-*.so
 *.pdf
 *.gds
 .cache
