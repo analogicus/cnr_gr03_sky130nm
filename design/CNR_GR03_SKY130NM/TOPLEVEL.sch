@@ -213,6 +213,19 @@ N 340 -130 400 -130 {
 lab=VOUT}
 N 340 -100 400 -100 {
 lab=VRST}
+N 80 170 80 230 {
+lab=#net1}
+N -190 70 190 70 {
+lab=VSS}
+N 190 0 190 70 {
+lab=VSS}
+N 190 0 190 180 {
+lab=VSS}
+N -240 0 -190 0 {}
+N -240 -80 -240 0 {}
+N -460 -80 -240 -80 {}
+N -460 -80 -460 70 {}
+N -460 70 -190 70 {}
 C {CNR_GR03_SKY130NM/MILESTONE1.sym} -190 -120 0 0 {name=x1}
 C {CNR_GR03_SKY130NM/MILESTONE2.sym} 190 -100 0 0 {name=x2}
 C {devices/ipin.sym} -380 -220 0 0 {name=p1 lab=VDD}
@@ -221,3 +234,12 @@ C {devices/opin.sym} 400 -130 2 1 {name=p3 lab=VOUT}
 C {devices/ipin.sym} 400 -100 0 1 {name=p4 lab=VRST}
 C {devices/lab_wire.sym} 0 -110 0 0 {name=p5 sig_type=std_logic lab=I_PTAT}
 C {devices/lab_wire.sym} 0 -80 0 0 {name=p6 sig_type=std_logic lab=VREF}
+C {CNR_GR03_SKY130NM/CurrentRef.sym} -70 170 0 0 {name=x3
+}
+C {devices/lab_wire.sym} -220 170 0 0 {name=p7 sig_type=std_logic lab=VREF}
+C {devices/lab_wire.sym} -220 140 0 0 {name=p8 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} -220 200 0 0 {name=p9 sig_type=std_logic lab=VSS}
+C {devices/vsource.sym} 80 260 0 0 {name=V1 value=0 savecurrent=false}
+C {devices/lab_wire.sym} 80 290 0 0 {name=p10 sig_type=std_logic lab=VSS}
+C {devices/isource.sym} 190 210 2 0 {name=I0 value=4u}
+C {devices/lab_wire.sym} 190 240 0 0 {name=p11 sig_type=std_logic lab=VDD}
