@@ -1,0 +1,12 @@
+magic
+tech sky130B
+timestamp 1711379445
+use MILESTONE1  MILESTONE1_0
+timestamp 1711370500
+transform 1 0 -6174 0 1 2300
+box 6170 -2300 19960 3418
+use MILESTONE2  MILESTONE2_0
+timestamp 1711378373
+transform 0 -1 15269 1 0 2827
+box -2700 -5700 9246 3514
+<< end >>

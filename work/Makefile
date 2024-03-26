@@ -12,7 +12,11 @@ include ../tech/make/core.make
 
 PREFIX=
 LIB=CNR_GR03_SKY130NM
-CELL=MILESTONE1
+#CELL=CM_OTA_NCH
+#CELL=MILESTONE1
+CELL=MILESTONE2
 
 #- Provide cells you want to check for the lvsall drcall commands
-CELLS = MILESTONE1
+#CELLS = CM_OTA_NCH
+#CELLS = MILESTONE1
+CELLS = MILESTONE2
