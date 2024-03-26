@@ -209,20 +209,6 @@ N 30 30 40 30 {
 lab=VSS}
 N 40 20 40 30 {
 lab=VSS}
-N 40 -220 440 -220 {
-lab=VDD}
-N 440 -220 440 -150 {
-lab=VDD}
-N 40 30 440 30 {
-lab=VSS}
-N 440 -40 440 30 {
-lab=VSS}
-N 590 40 620 40 {
-lab=CLK}
-N 590 -0 590 40 {
-lab=CLK}
-N 740 -100 790 -100 {
-lab=DOUT[7:0]}
 N 340 -80 370 -80 {
 lab=VRST}
 N 340 -110 370 -110 {
@@ -233,10 +219,5 @@ C {devices/ipin.sym} -380 -220 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} -380 30 0 0 {name=p2 lab=VSS}
 C {devices/lab_wire.sym} 0 -110 0 0 {name=p5 sig_type=std_logic lab=I_PTAT}
 C {devices/lab_wire.sym} 0 -80 0 0 {name=p6 sig_type=std_logic lab=VREF}
-C {CNR_GR03_SKY130NM/MILESTONE3.sym} 590 -110 0 0 {name=x3}
-C {devices/ipin.sym} 610 40 0 1 {name=p7 lab=CLK}
-C {devices/opin.sym} 780 -100 2 1 {name=p8 lab=DOUT[7:0]}
-C {devices/lab_wire.sym} 580 120 0 0 {name=p9 sig_type=std_logic lab=OUT_COMP}
-C {devices/lab_wire.sym} 580 160 0 0 {name=p10 sig_type=std_logic lab=RST_CAP}
 C {devices/ipin.sym} 360 -80 2 0 {name=p3 lab=VRST}
 C {devices/opin.sym} 360 -110 0 0 {name=p4 lab=VOUT}

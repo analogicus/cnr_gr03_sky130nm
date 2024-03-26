@@ -1,12 +1,12 @@
 * Measure TOPLEVEL
 .control
-load {cicname}_-40.raw
+load {cicname}_27.raw
 
 
 
 echo "MEAS_START"
-meas tran tdiff TRIG v(VRST) VAL=0.1 FALL=LAST TARG v(VOUT) VAL=1.5 CROSS=LAST 
-*meas tran tdiff TRIG v(VRST) VAL=1.75 RISE=1 TARG v(XDUT.I_PTAT) VAL=0.1 FALL=1
+meas tran tdiff TRIG v(rst2) VAL=0.1 FALL=LAST TARG v(VOUT) VAL=1.5 CROSS=LAST 
+*meas tran tdiff TRIG v(rst2) VAL=1.75 RISE=1 TARG v(XDUT.I_PTAT) VAL=0.1 FALL=1
 
 meas tran d7 FIND v(d7) WHEN v(vout)=1.5 CROSS=LAST
 meas tran d6 FIND v(d6) WHEN v(vout)=1.5 CROSS=LAST
