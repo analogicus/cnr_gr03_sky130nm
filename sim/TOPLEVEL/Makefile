@@ -5,8 +5,8 @@ all: typical etc mc summary
 #include ../../tech/make/sim.make
 
 TB=tran
-VIEW=Sch
-#VIEW=Lay
+#VIEW=Sch
+VIEW=Lay
 CELL=TOPLEVEL
 LIB =TOPLEVEL
 OPT=

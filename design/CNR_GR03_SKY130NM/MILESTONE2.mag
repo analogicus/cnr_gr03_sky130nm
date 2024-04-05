@@ -1,7 +1,7 @@
 magic
 tech sky130B
 magscale 1 2
-timestamp 1711378373
+timestamp 1712303529
 << locali >>
 rect 2148 3437 2303 3523
 rect 2148 2894 2234 3437
@@ -296,7 +296,7 @@ rect 18376 -391 18377 -289
 rect 18479 -391 18480 -289
 rect 18376 -532 18480 -391
 use CM_OTA_NCH  CM_OTA_NCH_0
-timestamp 1711300264
+timestamp 1712302962
 transform 1 0 7606 0 1 1092
 box -7620 -1100 8200 5936
 use CNRATR_NCH_4C2F0  CNRATR_NCH_4C2F0_0 ~/aicex/ip/cnr_atr_sky130nm/design/CNR_ATR_SKY130NM

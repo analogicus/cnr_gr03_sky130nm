@@ -59,11 +59,11 @@ N 280 -120 310 -120 {
 lab=VDD}
 N 280 120 280 230 {
 lab=IREF}
-C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_2C2F0.sym} 100 0 0 0 {name=x1 }
-C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C2F0.sym} 240 0 0 0 {name=x2 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} 100 0 0 0 {name=x1 }
 C {CNR_GR03_SKY130NM/CM_OTA_NCH.sym} -130 0 0 0 {name=x3}
 C {devices/iopin.sym} -160 -140 3 0 {name=p1 lab=VDD}
 C {devices/iopin.sym} -160 140 1 0 {name=p2 lab=VSS}
 C {devices/iopin.sym} -400 30 2 0 {name=p3 lab=VREF}
 C {devices/iopin.sym} 280 230 1 0 {name=p4 lab=IREF}
 C {SUN_TR_SKY130NM/SUNTR_RPPO4.sym} 140 50 1 0 {name=x4 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C1F2.sym} 240 0 0 0 {name=x2 }
