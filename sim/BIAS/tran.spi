@@ -43,8 +43,8 @@ XDUT VDD_1V8 VSS BIAS
 #ifdef Debug
 .save i(V0)
 #else
-.save i(v.xdut.V1)
-.save all
+.save i(v.xdut.V1) v(VDD_1V8) v(VSS)
+*.save all
 #endif
 
 
@@ -63,7 +63,7 @@ optran 0 0 0 10n 10u 0
 tran 10p 1n 1p
 *quit
 #else
-tran 100p 100n 10p
+tran 100u 2000m 1u
 write
 quit
 #endif

@@ -11,7 +11,9 @@ CELL=BIAS
 LIB =BIAS
 OPT=
 
-
+netlist:
+	cd ../../work && xschem -q -x -b -s -n ../design/CNR_GR03_SKY130NM/BIAS.sch
+	perl -pi -e "s/\*\*\.subckt/\.subckt/ig;s/\*\*\.ends/\.ends/ig;" ../../work/xsch/BIAS.spice
 
 test:
 	${MAKE} typical OPT="Debug"
