@@ -6,8 +6,8 @@ load {cicname}.raw
 echo "MEAS_START"
 
 *meas tran V1 find i(V1) at=5n
-meas tran i1 find i(v.xdut.v1) at=20m
-meas tran i2 find i(v.xdut.v1) at=1000m
+meas tran i1 find i(v.xdut.v1) at=60u
+meas tran i2 find i(v.xdut.v1) at=20u
 
 echo "MEAS_END"
 .endc

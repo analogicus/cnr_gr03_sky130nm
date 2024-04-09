@@ -63,7 +63,7 @@ optran 0 0 0 10n 10u 0
 tran 10p 1n 1p
 *quit
 #else
-tran 100u 2000m 1u
+tran 1n 100u 1u
 write
 quit
 #endif

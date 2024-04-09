@@ -5,6 +5,8 @@ K {}
 V {}
 S {}
 E {}
+T {BIAS-circuit} 520 -820 0 0 0.8 0.8 {}
+T {Start-up circuit} 1420 -830 0 0 0.8 0.8 {}
 N 800 -590 800 -470 {
 lab=#net1}
 N 480 -590 480 -470 {
@@ -107,12 +109,60 @@ N 1040 -620 1080 -620 {
 lab=VDD}
 N 1080 -700 1080 -620 {
 lab=VDD}
-N 1040 -590 1040 -480 {
-lab=#net6}
-N 1040 -420 1040 -60 {
-lab=VSS}
 N 800 -60 1040 -60 {
 lab=VSS}
+N 1740 -590 1740 -310 {
+lab=#net6}
+N 1600 -500 1740 -500 {
+lab=#net6}
+N 1740 -250 1740 -60 {
+lab=VSS}
+N 1050 -60 1740 -60 {
+lab=VSS}
+N 1040 -60 1050 -60 {
+lab=VSS}
+N 1080 -700 1740 -700 {
+lab=VDD}
+N 1740 -700 1740 -650 {
+lab=VDD}
+N 1680 -280 1700 -280 {
+lab=VDD}
+N 1660 -280 1680 -280 {
+lab=VDD}
+N 1640 -280 1660 -280 {
+lab=VDD}
+N 1640 -700 1640 -280 {
+lab=VDD}
+N 1530 -500 1600 -500 {
+lab=#net6}
+N 1490 -700 1490 -530 {
+lab=VDD}
+N 800 -320 1490 -320 {
+lab=#net4}
+N 1350 -620 1350 -560 {
+lab=#net2}
+N 980 -560 1280 -560 {
+lab=#net2}
+N 1490 -470 1490 -320 {
+lab=#net4}
+N 1350 -620 1700 -620 {
+lab=#net2}
+N 1280 -560 1350 -560 {
+lab=#net2}
+N 1200 -700 1200 -650 {
+lab=VDD}
+N 1200 -620 1240 -620 {
+lab=VDD}
+N 1240 -700 1240 -620 {
+lab=VDD}
+N 1140 -620 1160 -620 {
+lab=#net2}
+N 1140 -620 1140 -560 {
+lab=#net2}
+N 1040 -590 1040 -500 {
+lab=IBIAS1_2u}
+N 1200 -590 1200 -500 {
+lab=IBIAS2_2u}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 760 -620 0 0 {name=x4}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 520 -620 0 1 {name=x5}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C4F0.sym} 760 -440 0 0 {name=x6 }
@@ -123,4 +173,9 @@ C {devices/ipin.sym} 340 -700 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} 340 -60 0 0 {name=p2 lab=VSS}
 C {SUN_TR_SKY130NM/SUNTR_RPPO8.sym} 480 -180 1 0 {name=x3 }
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 1000 -620 0 0 {name=x7}
-C {devices/vsource.sym} 1040 -450 0 0 {name=V1 value=0 savecurrent=true}
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_2C12F0.sym} 1700 -280 0 0 {name=x9 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_12C1F2.sym} 1700 -620 0 0 {name=x8 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_12C1F2.sym} 1530 -500 0 1 {name=x10 }
+C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 1160 -620 0 0 {name=x11}
+C {devices/opin.sym} 1040 -500 0 0 {name=p3 lab=IBIAS1_2u}
+C {devices/opin.sym} 1200 -500 0 0 {name=p4 lab=IBIAS2_2u}
