@@ -2,22 +2,82 @@
 .control
 load {cicname}_-40.raw
 
+echo "MEAS_START"
+meas tran tdiff TRIG v(rst2) VAL=0.1 FALL=LAST TARG v(VOUT) VAL=1.5 CROSS=LAST 
+*meas tran tdiff TRIG v(rst2) VAL=1.75 RISE=1 TARG v(XDUT.I_PTAT) VAL=0.1 FALL=1
 
+meas tran d7_-40 FIND v(d7) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d6_-40 FIND v(d6) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d5_-40 FIND v(d5) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d4_-40 FIND v(d4) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d3_-40 FIND v(d3) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d2_-40 FIND v(d2) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d1_-40 FIND v(d1) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d0_-40 FIND v(d0) WHEN v(vout)=1.5 CROSS=LAST
+
+
+load {cicname}_0.raw
 
 echo "MEAS_START"
-meas tran tdiff TRIG v(VRST) VAL=0.1 FALL=LAST TARG v(VOUT) VAL=1.5 CROSS=LAST 
-*meas tran tdiff TRIG v(VRST) VAL=1.75 RISE=1 TARG v(XDUT.I_PTAT) VAL=0.1 FALL=1
+meas tran tdiff TRIG v(rst2) VAL=0.1 FALL=LAST TARG v(VOUT) VAL=1.5 CROSS=LAST 
+*meas tran tdiff TRIG v(rst2) VAL=1.75 RISE=1 TARG v(XDUT.I_PTAT) VAL=0.1 FALL=1
 
-meas tran d7 FIND v(d7) WHEN v(vout)=1.5 CROSS=LAST
-meas tran d6 FIND v(d6) WHEN v(vout)=1.5 CROSS=LAST
-meas tran d5 FIND v(d5) WHEN v(vout)=1.5 CROSS=LAST
-meas tran d4 FIND v(d4) WHEN v(vout)=1.5 CROSS=LAST
-meas tran d3 FIND v(d3) WHEN v(vout)=1.5 CROSS=LAST
-meas tran d2 FIND v(d2) WHEN v(vout)=1.5 CROSS=LAST
-meas tran d1 FIND v(d1) WHEN v(vout)=1.5 CROSS=LAST
-meas tran d0 FIND v(d0) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d7_0 FIND v(d7) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d6_0 FIND v(d6) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d5_0 FIND v(d5) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d4_0 FIND v(d4) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d3_0 FIND v(d3) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d2_0 FIND v(d2) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d1_0 FIND v(d1) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d0_0 FIND v(d0) WHEN v(vout)=1.5 CROSS=LAST
 
 
+load {cicname}_27.raw
+
+echo "MEAS_START"
+meas tran tdiff TRIG v(rst2) VAL=0.1 FALL=LAST TARG v(VOUT) VAL=1.5 CROSS=LAST 
+*meas tran tdiff TRIG v(rst2) VAL=1.75 RISE=1 TARG v(XDUT.I_PTAT) VAL=0.1 FALL=1
+
+meas tran d7_27 FIND v(d7) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d6_27 FIND v(d6) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d5_27 FIND v(d5) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d4_27 FIND v(d4) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d3_27 FIND v(d3) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d2_27 FIND v(d2) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d1_27 FIND v(d1) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d0_27 FIND v(d0) WHEN v(vout)=1.5 CROSS=LAST
+
+
+load {cicname}_75.raw
+
+echo "MEAS_START"
+meas tran tdiff TRIG v(rst2) VAL=0.1 FALL=LAST TARG v(VOUT) VAL=1.5 CROSS=LAST 
+*meas tran tdiff TRIG v(rst2) VAL=1.75 RISE=1 TARG v(XDUT.I_PTAT) VAL=0.1 FALL=1
+
+meas tran d7_75 FIND v(d7) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d6_75 FIND v(d6) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d5_75 FIND v(d5) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d4_75 FIND v(d4) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d3_75 FIND v(d3) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d2_75 FIND v(d2) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d1_75 FIND v(d1) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d0_75 FIND v(d0) WHEN v(vout)=1.5 CROSS=LAST
+
+
+load {cicname}_125.raw
+
+echo "MEAS_START"
+meas tran tdiff TRIG v(rst2) VAL=0.1 FALL=LAST TARG v(VOUT) VAL=1.5 CROSS=LAST 
+*meas tran tdiff TRIG v(rst2) VAL=1.75 RISE=1 TARG v(XDUT.I_PTAT) VAL=0.1 FALL=1
+
+meas tran d7_125 FIND v(d7) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d6_125 FIND v(d6) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d5_125 FIND v(d5) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d4_125 FIND v(d4) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d3_125 FIND v(d3) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d2_125 FIND v(d2) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d1_125 FIND v(d1) WHEN v(vout)=1.5 CROSS=LAST
+meas tran d0_125 FIND v(d0) WHEN v(vout)=1.5 CROSS=LAST
 
 echo "MEAS_END"
 
