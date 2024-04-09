@@ -78,6 +78,8 @@ set color0=white
 set color1=black
 unset askquit
 
+save @m.xdut.x3.x7.xm1.msky130_fd_pr__pfet_01v8[id]
+
 optran 0 0 0 10n 10u 0
 
 

@@ -221,3 +221,11 @@ C {devices/lab_wire.sym} 0 -110 0 0 {name=p5 sig_type=std_logic lab=I_PTAT}
 C {devices/lab_wire.sym} 0 -80 0 0 {name=p6 sig_type=std_logic lab=VREF}
 C {devices/ipin.sym} 360 -80 2 0 {name=p3 lab=VRST}
 C {devices/opin.sym} 360 -110 0 0 {name=p4 lab=VOUT}
+C {CNR_GR03_SKY130NM/BIAS.sym} 700 -100 0 0 {name=x3}
+C {devices/lab_wire.sym} 550 -110 0 0 {name=p7 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 550 -90 0 0 {name=p8 sig_type=std_logic lab=VSS
+}
+C {devices/lab_wire.sym} -190 0 0 0 {name=p9 sig_type=std_logic lab=IBIAS1}
+C {devices/lab_wire.sym} 190 0 0 0 {name=p10 sig_type=std_logic lab=IBIAS2}
+C {devices/lab_wire.sym} 850 -110 0 1 {name=p11 sig_type=std_logic lab=IBIAS1}
+C {devices/lab_wire.sym} 850 -90 2 0 {name=p12 sig_type=std_logic lab=IBIAS2}

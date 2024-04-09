@@ -43,8 +43,6 @@ N 320 110 320 170 {
 lab=VSS}
 N 310 170 320 170 {
 lab=VSS}
-N 160 140 230 140 {
-lab=VDD}
 N 320 -130 320 -100 {
 lab=VDD}
 N -180 50 -170 50 {
@@ -53,8 +51,6 @@ N -110 50 -60 50 {
 lab=I_IN}
 N -140 100 -70 100 {
 lab=RST}
-N 160 70 160 80 {
-lab=#net1}
 N -170 50 -110 50 {
 lab=I_IN}
 N 90 -10 100 -10 {
@@ -71,6 +67,8 @@ N 120 -10 120 30 {
 lab=I_IN}
 N 40 50 80 50 {
 lab=I_IN}
+N 160 70 160 120 {
+lab=IBIAS}
 C {devices/capa.sym} 80 100 0 0 {name=C1
 m=1
 value=8.8805p
@@ -90,5 +88,4 @@ C {devices/iopin.sym} 320 -130 3 0 {name=VDD lab=VDD
 C {devices/iopin.sym} -220 170 2 0 {name=VSS lab=VSS
 }
 C {CNR_GR03_SKY130NM/CM_OTA_NCH.sym} 350 20 0 0 {name=x1}
-C {devices/isource.sym} 160 110 2 0 {name=I1 value=2u}
-C {devices/lab_wire.sym} 220 140 0 0 {name=p3 sig_type=std_logic lab=VDD}
+C {devices/iopin.sym} 160 120 0 0 {name=p1 lab=IBIAS}

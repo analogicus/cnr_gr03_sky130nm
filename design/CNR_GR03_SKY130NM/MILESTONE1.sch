@@ -15,8 +15,6 @@ N 850 280 850 370 {
 lab=VR1}
 N 910 280 910 370 {
 lab=VD1}
-N 930 280 930 370 {
-lab=IBIAS}
 N -110 -90 30 -90 {
 lab=OTA_OUT}
 N -220 -90 -110 -90 {
@@ -129,10 +127,6 @@ N 530 -160 580 -160 {
 lab=VDD}
 N 530 -60 530 -50 {
 lab=VREF}
-N -100 490 -100 540 {
-lab=IBIAS}
-N -100 380 -100 430 {
-lab=VDD}
 N 340 -60 340 -20 {
 lab=I_OUT1}
 N 340 -20 340 -10 {
@@ -275,10 +269,13 @@ N -20 400 50 400 {
 lab=VSS}
 N -20 400 -20 560 {
 lab=VSS}
+N 930 370 950 370 {
+lab=IBIAS}
+N 930 280 930 370 {
+lab=IBIAS}
 C {devices/iopin.sym} -470 -160 0 1 {name=p1 lab=VDD}
 C {devices/iopin.sym} -470 560 0 1 {name=p4 lab=VSS}
 C {devices/lab_wire.sym} 1040 120 0 0 {name=p6 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 930 360 1 0 {name=p12 sig_type=std_logic lab=IBIAS}
 C {devices/lab_wire.sym} 850 340 1 0 {name=p13 sig_type=std_logic lab=VR1}
 C {devices/lab_wire.sym} 910 340 1 0 {name=p14 sig_type=std_logic lab=VD1}
 C {devices/lab_wire.sym} 730 120 0 0 {name=p15 sig_type=std_logic lab=VDD}
@@ -304,9 +301,6 @@ spiceprefix=X
 }
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_8C1F2.sym} 490 -90 0 0 {name=x1[4:0]}
 C {CNR_GR03_SKY130NM/CM_OTA_NCH.sym} 880 90 3 0 {name=x1}
-C {devices/isource.sym} -100 460 0 0 {name=I0 value=2u}
-C {devices/lab_wire.sym} -100 400 0 0 {name=p7 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} -100 530 1 0 {name=p9 sig_type=std_logic lab=IBIAS}
 C {sky130_fd_pr/pnp_05v5.sym} 510 510 0 0 {name=Q3
 model=pnp_05v5_W3p40L3p40
 m=5
@@ -316,3 +310,4 @@ C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 70 360 1 0 {name=x2 }
 C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 530 140 1 0 {name=x4 }
 C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 530 270 1 0 {name=x5 }
 C {SUN_TR_SKY130NM/SUNTR_RPPO16.sym} 530 370 1 0 {name=x6 }
+C {devices/iopin.sym} 950 370 0 0 {name=p7 lab=IBIAS}
