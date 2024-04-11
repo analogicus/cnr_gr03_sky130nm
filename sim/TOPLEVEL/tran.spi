@@ -79,7 +79,7 @@ option keepopinfo
 *rite {cicname}_0.raw
 
 option TEMP=27
-tran 1000m 550m 100m
+tran 10u 800u 400u
 
 
 *let id = @m.xdut.x3.xm7.msky130_fd_pr__nfet_01v8[id]
