@@ -21,6 +21,6 @@ CELL=BIAS
 #- Provide cells you want to check for the lvsall drcall commands
 #CELLS = CM_OTA_NCH
 #CELLS = MILESTONE1
-#CELLS = MILESTONE2
-CELLS = BIAS
+#CELLS=MILESTONE2
+CELLS=BIAS
 #CELLS=TOPLEVEL
