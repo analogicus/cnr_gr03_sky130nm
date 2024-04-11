@@ -120,117 +120,41 @@ lab=VDD}
 N 40 -160 40 -150 {
 lab=VDD}
 N 40 10 40 20 {
-lab=VSS}
+lab=#net1}
 N 40 -0 40 10 {
-lab=VSS}
+lab=#net1}
 N 40 -10 40 -0 {
-lab=VSS}
+lab=#net1}
 N 40 -20 40 -10 {
-lab=VSS}
+lab=#net1}
 N 40 -30 40 -20 {
-lab=VSS}
+lab=#net1}
 N 40 -40 40 -30 {
-lab=VSS}
+lab=#net1}
 N -380 30 -340 30 {
 lab=VSS}
 N -340 20 -340 30 {
 lab=VSS}
-N -340 30 -310 30 {
-lab=VSS}
-N -310 30 -300 30 {
-lab=VSS}
-N -300 30 -290 30 {
-lab=VSS}
-N -290 30 -280 30 {
-lab=VSS}
-N -280 30 -270 30 {
-lab=VSS}
-N -270 30 -260 30 {
-lab=VSS}
-N -260 30 -250 30 {
-lab=VSS}
-N -250 30 -240 30 {
-lab=VSS}
-N -240 30 -230 30 {
-lab=VSS}
-N -230 30 -220 30 {
-lab=VSS}
-N -220 30 -210 30 {
-lab=VSS}
-N -210 30 -200 30 {
-lab=VSS}
-N -200 30 -190 30 {
-lab=VSS}
-N -190 30 -180 30 {
-lab=VSS}
-N -180 30 -170 30 {
-lab=VSS}
-N -170 30 -160 30 {
-lab=VSS}
-N -160 30 -150 30 {
-lab=VSS}
-N -150 30 -140 30 {
-lab=VSS}
-N -140 30 -130 30 {
-lab=VSS}
-N -130 30 -120 30 {
-lab=VSS}
-N -120 30 -110 30 {
-lab=VSS}
-N -110 30 -100 30 {
-lab=VSS}
-N -100 30 -90 30 {
-lab=VSS}
-N -90 30 -80 30 {
-lab=VSS}
-N -80 30 -70 30 {
-lab=VSS}
-N -70 30 -60 30 {
-lab=VSS}
-N -60 30 -50 30 {
-lab=VSS}
-N -50 30 -40 30 {
-lab=VSS}
-N -40 30 -30 30 {
-lab=VSS}
-N -30 30 -20 30 {
-lab=VSS}
-N -20 30 -10 30 {
-lab=VSS}
-N -10 30 -0 30 {
-lab=VSS}
-N 0 30 10 30 {
-lab=VSS}
-N 10 30 20 30 {
-lab=VSS}
-N 20 30 30 30 {
-lab=VSS}
-N 30 30 40 30 {
-lab=VSS}
 N 40 20 40 30 {
-lab=VSS}
+lab=#net1}
 N 340 -130 400 -130 {
 lab=VOUT}
 N 340 -100 400 -100 {
 lab=VRST}
-N -190 70 190 70 {
+N -540 140 -520 140 {
 lab=VSS}
-N 190 0 190 70 {
+N -220 110 -190 110 {
+lab=IBIAS1}
+N -190 0 -190 40 {
+lab=IBIAS1}
+N -220 130 -190 130 {
+lab=IBIAS2}
+N -550 100 -520 100 {
+lab=VDD}
+N -550 140 -540 140 {
 lab=VSS}
-N -240 0 -190 0 {
-lab=VSS}
-N -240 -80 -240 0 {
-lab=VSS}
-N -460 -80 -240 -80 {
-lab=VSS}
-N -460 -80 -460 70 {
-lab=VSS}
-N -460 70 -190 70 {
-lab=VSS}
-N -400 110 -380 110 {
-lab=VSS}
-N -380 70 -380 110 {
-lab=VSS}
+N 190 0 190 30 {
+lab=IBIAS2}
 C {CNR_GR03_SKY130NM/MILESTONE1.sym} -190 -120 0 0 {name=x1}
 C {CNR_GR03_SKY130NM/MILESTONE2.sym} 190 -100 0 0 {name=x2}
 C {devices/ipin.sym} -380 -220 0 0 {name=p1 lab=VDD}
@@ -239,4 +163,11 @@ C {devices/opin.sym} 400 -130 2 1 {name=p3 lab=VOUT}
 C {devices/ipin.sym} 400 -100 0 1 {name=p4 lab=VRST}
 C {devices/lab_wire.sym} 0 -110 0 0 {name=p5 sig_type=std_logic lab=I_PTAT}
 C {devices/lab_wire.sym} 0 -80 0 0 {name=p6 sig_type=std_logic lab=VREF}
-C {devices/ipin.sym} -400 110 0 0 {name=p7 lab=IBIAS}
+C {CNR_GR03_SKY130NM/BIAS.sym} -370 120 0 0 {name=x3}
+C {devices/lab_wire.sym} -530 140 0 0 {name=p7 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} -530 100 0 0 {name=p8 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} -190 110 0 0 {name=p9 sig_type=std_logic lab=IBIAS1}
+C {devices/lab_wire.sym} -210 130 2 0 {name=p10 sig_type=std_logic lab=IBIAS2}
+C {devices/lab_wire.sym} -190 10 3 0 {name=p11 sig_type=std_logic lab=IBIAS1}
+C {devices/lab_wire.sym} 190 30 3 0 {name=p12 sig_type=std_logic lab=IBIAS2}
+C {devices/lab_wire.sym} 40 20 1 0 {name=p13 sig_type=std_logic lab=VSS}
