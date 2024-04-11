@@ -43,19 +43,17 @@ N 800 -700 800 -650 {
 lab=VDD}
 N 480 -230 480 -180 {
 lab=#net5}
-N 330 -60 480 -60 {
+N 330 70 480 70 {
 lab=VSS}
-N 480 -100 480 -60 {
+N 480 30 480 70 {
 lab=VSS}
 N 800 -230 800 -60 {
 lab=VSS}
-N 480 -60 800 -60 {
+N 440 -10 460 -10 {
 lab=VSS}
-N 440 -140 460 -140 {
+N 420 -10 440 -10 {
 lab=VSS}
-N 420 -140 440 -140 {
-lab=VSS}
-N 420 -140 420 -60 {
+N 420 -10 420 70 {
 lab=VSS}
 N 440 -620 480 -620 {
 lab=VDD}
@@ -68,28 +66,20 @@ lab=VDD}
 N 800 -700 840 -700 {
 lab=VDD}
 N 440 -440 480 -440 {
-lab=#net3}
+lab=VSS}
 N 440 -440 440 -380 {
-lab=#net3}
-N 440 -380 480 -380 {
-lab=#net3}
+lab=VSS}
 N 800 -440 840 -440 {
-lab=#net4}
+lab=VSS}
 N 840 -440 840 -380 {
-lab=#net4}
-N 800 -380 840 -380 {
-lab=#net4}
+lab=VSS}
 N 440 -260 480 -260 {
-lab=#net5}
+lab=VSS}
 N 440 -260 440 -200 {
-lab=#net5}
-N 440 -200 480 -200 {
-lab=#net5}
+lab=VSS}
 N 800 -260 840 -260 {
 lab=VSS}
 N 840 -260 840 -200 {
-lab=VSS}
-N 800 -200 840 -200 {
 lab=VSS}
 N 840 -700 1040 -700 {
 lab=VDD}
@@ -163,6 +153,18 @@ N 1040 -590 1040 -500 {
 lab=IBIAS1_2u}
 N 1200 -590 1200 -500 {
 lab=IBIAS2_2u}
+N 800 -60 800 70 {
+lab=VSS}
+N 480 70 800 70 {
+lab=VSS}
+N 480 -180 480 -160 {
+lab=#net5}
+N 480 -80 480 -50 {
+lab=#net7}
+N 420 -120 460 -120 {
+lab=VSS}
+N 420 -120 420 -10 {
+lab=VSS}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 760 -620 0 0 {name=x4}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 520 -620 0 1 {name=x5}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C4F0.sym} 760 -440 0 0 {name=x6 }
@@ -170,8 +172,8 @@ C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C4F0.sym} 760 -260 0 0 {name=x1
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C4F0.sym} 520 -440 0 1 {name=x2 }
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_4C4F0.sym} 520 -260 0 1 {name=x3[3:0]}
 C {devices/ipin.sym} 340 -700 0 0 {name=p1 lab=VDD}
-C {devices/ipin.sym} 340 -60 0 0 {name=p2 lab=VSS}
-C {SUN_TR_SKY130NM/SUNTR_RPPO8.sym} 480 -180 1 0 {name=x3 }
+C {devices/ipin.sym} 340 70 0 0 {name=p2 lab=VSS}
+C {SUN_TR_SKY130NM/SUNTR_RPPO4.sym} 480 -50 1 0 {name=x3 }
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 1000 -620 0 0 {name=x7}
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_NCH_2C12F0.sym} 1700 -280 0 0 {name=x9 }
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_12C1F2.sym} 1700 -620 0 0 {name=x8 }
@@ -179,3 +181,8 @@ C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_12C1F2.sym} 1530 -500 0 1 {name=
 C {CNR_ATR_SKY130NM/CNR_ATR_SKY130NM/CNRATR_PCH_4C4F0.sym} 1160 -620 0 0 {name=x11}
 C {devices/opin.sym} 1040 -500 0 0 {name=p3 lab=IBIAS1_2u}
 C {devices/opin.sym} 1200 -500 0 0 {name=p4 lab=IBIAS2_2u}
+C {devices/lab_wire.sym} 440 -220 0 0 {name=p6 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 840 -390 0 0 {name=p7 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 840 -220 0 0 {name=p8 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 440 -400 0 0 {name=p5 sig_type=std_logic lab=VSS}
+C {SUN_TR_SKY130NM/SUNTR_RPPO2.sym} 480 -160 1 0 {name=x12 }

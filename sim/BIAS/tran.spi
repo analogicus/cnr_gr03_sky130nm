@@ -25,11 +25,13 @@
 *-----------------------------------------------------------------
 VSS  VSS  0 dc 0
 VDD  VDD_1V8  VSS  dc 1.8
+V1 IBIAS1 VSS dc 0
+V2 IBIAS2 VSS dc 0
 
 *-----------------------------------------------------------------
 * DUT
 
-XDUT VDD_1V8 VSS BIAS
+XDUT VDD_1V8 VSS IBIAS1 IBIAS2 BIAS
 
 *----------------------------------------------------------------
 * MEASURES
@@ -43,7 +45,7 @@ XDUT VDD_1V8 VSS BIAS
 #ifdef Debug
 .save i(V0)
 #else
-.save i(v.xdut.V1) v(VDD_1V8) v(VSS)
+.save i(v1) v(VDD_1V8) v(VSS) i(v2)
 *.save all
 #endif
 
@@ -57,13 +59,15 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 10n 10u 0
+save @m.xdut.x7.xm1.msky130_fd_pr__pfet_01v8[id]
+
+optran 0 0 0 100n 10u 0
 
 #ifdef Debug
 tran 10p 1n 1p
 *quit
 #else
-tran 1n 100u 1u
+tran 10m 10m 400u
 write
 quit
 #endif
