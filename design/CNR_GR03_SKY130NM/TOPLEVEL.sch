@@ -136,6 +136,7 @@ lab=VSS}
 N -340 20 -340 30 {
 lab=VSS}
 N 40 20 40 30 {
+
 lab=#net1}
 N 340 -130 400 -130 {
 lab=VOUT}
@@ -155,14 +156,14 @@ N -550 140 -540 140 {
 lab=VSS}
 N 190 0 190 30 {
 lab=IBIAS2}
+
 C {CNR_GR03_SKY130NM/MILESTONE1.sym} -190 -120 0 0 {name=x1}
 C {CNR_GR03_SKY130NM/MILESTONE2.sym} 190 -100 0 0 {name=x2}
 C {devices/ipin.sym} -380 -220 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} -380 30 0 0 {name=p2 lab=VSS}
-C {devices/opin.sym} 400 -130 2 1 {name=p3 lab=VOUT}
-C {devices/ipin.sym} 400 -100 0 1 {name=p4 lab=VRST}
 C {devices/lab_wire.sym} 0 -110 0 0 {name=p5 sig_type=std_logic lab=I_PTAT}
 C {devices/lab_wire.sym} 0 -80 0 0 {name=p6 sig_type=std_logic lab=VREF}
+
 C {CNR_GR03_SKY130NM/BIAS.sym} -370 120 0 0 {name=x3}
 C {devices/lab_wire.sym} -530 140 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} -530 100 0 0 {name=p8 sig_type=std_logic lab=VDD}
@@ -171,3 +172,4 @@ C {devices/lab_wire.sym} -210 130 2 0 {name=p10 sig_type=std_logic lab=IBIAS2}
 C {devices/lab_wire.sym} -190 10 3 0 {name=p11 sig_type=std_logic lab=IBIAS1}
 C {devices/lab_wire.sym} 190 30 3 0 {name=p12 sig_type=std_logic lab=IBIAS2}
 C {devices/lab_wire.sym} 40 20 1 0 {name=p13 sig_type=std_logic lab=VSS}
+

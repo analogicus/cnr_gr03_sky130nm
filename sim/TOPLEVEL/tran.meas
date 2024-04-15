@@ -4,7 +4,7 @@ load {cicname}_27.raw
 
 
 
-echo "MEAS_START"
+
 
 meas tran tdiff TRIG v(vrst) VAL=0.1 FALL=LAST TARG v(VOUT) VAL=1.5 CROSS=LAST 
 *meas tran tdiff TRIG v(rst2) VAL=1.75 RISE=1 TARG v(XDUT.I_PTAT) VAL=0.1 FALL=1
@@ -22,3 +22,4 @@ echo "MEAS_END"
 
 
 .endc
+

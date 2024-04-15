@@ -1,0 +1,6 @@
+corner:
+  Lay: ''
+  Sch: ''
+ngspice:
+  library: MILESTONE3_DIGITAL
+  cell: MILESTONE3_DIGITAL
