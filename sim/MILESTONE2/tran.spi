@@ -26,14 +26,16 @@
 VSS  VSS  0 dc 0
 VDD  VDD_1V8 VSS dc 1.8
 VRST RST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 25US)
-*VRST RST VSS dc 0
 IIN VSS I_IN dc 1u
-VREF VREF_I VSS dc 1.187
+VREF VREF_I VSS dc 1.2
+IBIAS VDD_1V8 IBIAS dc 2u
 
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
-XDUT RST OUT I_IN VREF_I VDD_1V8 VSS MILESTONE2
+XDUT RST OUT I_IN VREF_I VDD_1V8 VSS IBIAS MILESTONE2
+
+*RST OUT I_IN VREF_I VDD VSS IBIAS
 
 *----------------------------------------------------------------
 * MEASURES

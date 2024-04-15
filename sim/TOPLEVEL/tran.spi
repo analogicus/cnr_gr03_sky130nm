@@ -25,8 +25,10 @@
 *-----------------------------------------------------------------
 VSS  VSS  0 dc 0
 VDD  VDD_1V8  VSS  dc 1.8
-Vclk clk VSS PULSE(0 1.8 0.0 2NS 2NS 12.5NS 25NS)
-*VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 25US)
+
+VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 50US)
+*IBIAS VDD IBIAS dc 2u
+
 *VRST VRST VSS dc 0
 Vtest rst VSS dc 0
 
@@ -61,14 +63,17 @@ R10 rst2 VSS 1M
 *----------------------------------------------------------------
 
 *.save all
-*TOPLEVEL values
-.save v(VOUT) v(XDUT.VREF) v(XDUT.I_PTAT) v(VRST)
+
+*TOPLEVEL valuescat
+.save v(VOUT) v(VRST) v(XDUT.VREF) v(XDUT.I_PTAT) 
 
 *Milestone 1 values
-.save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1) 
+.save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1)
 
-.save v(clk) v(d1) v(d2) v(d3) v(d4) v(d5) v(d6) v(d7) v(d0) v(VRST) v(rst2)
 
+
+.save i(v.XDUT.V1)
+*.save all
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
@@ -80,29 +85,37 @@ unset askquit
 
 save @m.xdut.x3.x7.xm1.msky130_fd_pr__pfet_01v8[id]
 
-optran 0 0 0 10n 10u 0
+
+option keepopinfo
+optran 0 0 0 100n 10u 0 
+option keepopinfo
 
 
-*option TEMP=-40
-*tran 1000n 100u 30u
-*write {cicname}_-40.raw
+*ption TEMP=-40
+*ran 100n 100u 30u
+*rite {cicname}_-40.raw
 *
-*option TEMP=0
-*tran 1000n 100u 30u
-*write {cicname}_0.raw
+*ption TEMP=0
+*ran 100n 100u 30u
+*rite {cicname}_0.raw
 
 option TEMP=27
-tran 1000n 100u 30u
+tran 10u 800u 400u
+
+
+*let id = @m.xdut.x3.xm7.msky130_fd_pr__nfet_01v8[id]
+
 write {cicname}_27.raw
 
+
 *option TEMP=75
-*tran 1000n 100u 30u
+*tran 100n 100u 30u
 *write {cicname}_75.raw
 *
 *option TEMP=125
-*tran 1000n 100u 30u
+*tran 100n 100u 30u
 *write {cicname}_125.raw
-
+*
 exit
 
 .endc
