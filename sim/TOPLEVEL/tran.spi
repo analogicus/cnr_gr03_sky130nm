@@ -4,6 +4,7 @@
 *----------------------------------------------------------------
 #ifdef Lay
 .include ../../../work/lpe/TOPLEVEL_lpe.spi
+.include ../../../work/lpe/M3_lpe.spi
 #else
 .include ../../../work/xsch/TOPLEVEL.spice
 #endif
@@ -25,8 +26,8 @@
 *-----------------------------------------------------------------
 VSS  VSS  0 dc 0
 VDD  VDD_1V8  VSS  dc 1.8
-
-VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 50US)
+Vclk clk VSS PULSE(0 1.8 0.0 2NS 2NS 12.5NS 25NS)
+*VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 50US)
 *IBIAS VDD IBIAS dc 2u
 
 *VRST VRST VSS dc 0
@@ -34,13 +35,22 @@ Vtest rst VSS dc 0
 
     
 *-----------------------------------------------------------------
-* DUT
+* DUT xschem
 *-----------------------------------------------------------------
-XDUT VDD_1V8 VSS rst2 VOUT TOPLEVEL
-adut [clk VOUT rst] [rst2 d7 d6 d5 d4 d3 d2 d1 d0]  null dut
-.model dut d_cosim simulation="../dtt.so"
+XDUT VDD_1V8 VSS VOUT rst2 TOPLEVEL
+*adut [clk VOUT rst] [rst2 d7 d6 d5 d4 d3 d2 d1 d0]  null dut
+*.model dut d_cosim simulation="../dtt.so"
+
+
+*-----------------------------------------------------------------
+* DUT lay
+*-----------------------------------------------------------------
+ldut clk d5 d0 d2 d7 d4 d6 d1 d3 VOUT VDD VSS M3
+
+
 
 R11 rst2 VRST 10k
+R10 rst2 VSS 1M
 
 R1 d1 VSS 1M
 R2 d2 VSS 1M
@@ -51,7 +61,7 @@ R6 d6 VSS 1M
 R7 d7 VSS 1M
 R0 d0 VSS 1M
 
-R10 rst2 VSS 1M
+
 
 *----------------------------------------------------------------
 * MEASURES
@@ -70,10 +80,9 @@ R10 rst2 VSS 1M
 *Milestone 1 values
 .save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1)
 
+.save v(d0) v(d1) v(d2) v(d3) v(d4) v(d5) v(d6) v(d7)
+.save v(clk) v(rst2)
 
-
-.save i(v.XDUT.V1)
-*.save all
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
@@ -83,39 +92,17 @@ set color0=white
 set color1=black
 unset askquit
 
-save @m.xdut.x3.x7.xm1.msky130_fd_pr__pfet_01v8[id]
+*save @m.xdut.x3.x7.xm1.msky130_fd_pr__pfet_01v8[id]
 
 
-option keepopinfo
-optran 0 0 0 100n 10u 0 
-option keepopinfo
+optran 0 0 0 10n 10u 0 
 
-
-*ption TEMP=-40
-*ran 100n 100u 30u
-*rite {cicname}_-40.raw
-*
-*ption TEMP=0
-*ran 100n 100u 30u
-*rite {cicname}_0.raw
 
 option TEMP=27
-tran 10u 800u 400u
-
-
-*let id = @m.xdut.x3.xm7.msky130_fd_pr__nfet_01v8[id]
-
+tran 10000m 475u 400u 100u
 write {cicname}_27.raw
 
 
-*option TEMP=75
-*tran 100n 100u 30u
-*write {cicname}_75.raw
-*
-*option TEMP=125
-*tran 100n 100u 30u
-*write {cicname}_125.raw
-*
 exit
 
 .endc
