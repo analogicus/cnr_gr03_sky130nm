@@ -15,6 +15,7 @@ OPT=
 netlist:
 	cd ../../work && xschem -q -x -b -s -n ../design/CNR_GR03_SKY130NM/TOPLEVEL.sch
 	perl -pi -e "s/\*\*\.subckt/\.subckt/ig;s/\*\*\.ends/\.ends/ig;" ../../work/xsch/TOPLEVEL.spice
+ 
 
 
 test:
