@@ -1,13 +1,20 @@
 * Measure MILESTONE1
 .control
 
+*load tran_SchGtAttTtVt.raw
+*
+*echo "MEAS_START"
+*
+*echo "MEAS_END"
+
 load {cicname}.raw
+*load tran_LayGtAttTtVt.raw
 
 echo "MEAS_START"
-*let ibn = -i(XDUT.V0)
-*meas tran XDUT.V0 find ibn at=5n
 
-*meas dc temp
-*meas 
+let iout = i(v0)
+*meas dc vtest iout
+
 echo "MEAS_END"
+
 .endc
