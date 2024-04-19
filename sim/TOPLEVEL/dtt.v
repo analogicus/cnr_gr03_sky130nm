@@ -7,7 +7,7 @@ module TTD #(
     input logic clk, // clock to increment the counter
     input logic in,  // OTA output from comparing capacitor and Vref
     output logic rst_cap, // reset comparing capacitor
-    output logic [7:0] data_out // using logic instead of wire/reg for outputs
+    output logic [8:0] data_out // using logic instead of wire/reg for outputs
 );
 
     //---------------COUNTER WITH SYNC RESET------------------
@@ -39,7 +39,7 @@ module TTD #(
     //---------------ASSIGN OUTPUT-------------------------
     assign rst_cap = counter_out[WIDTH-1]; // output reset capacitor
     
-    assign data_out[7:0] = register_out[7:0]; // output register value
+    assign data_out[8:0] = register_out[8:0]; // output register value
     //assign data_out[7] = !register_out[7];
     
 

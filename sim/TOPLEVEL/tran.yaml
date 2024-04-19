@@ -1,5 +1,6 @@
 binary:
   src:
+    - d0
     - d1
     - d2
     - d3
@@ -7,4 +8,5 @@ binary:
     - d5
     - d6
     - d7
+    - d8
  
