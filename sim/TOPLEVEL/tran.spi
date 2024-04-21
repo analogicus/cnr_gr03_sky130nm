@@ -4,6 +4,7 @@
 *----------------------------------------------------------------
 #ifdef Lay
 .include ../../../work/lpe/TOPLEVEL_lpe.spi
+.include ../../../work/lpe/M3_lpe.spi
 #else
 .include ../../../work/xsch/TOPLEVEL.spice
 #endif
@@ -26,19 +27,30 @@
 VSS  VSS  0 dc 0
 VDD  VDD_1V8  VSS  dc 1.8
 Vclk clk VSS PULSE(0 1.8 0.0 2NS 2NS 12.5NS 25NS)
-*VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 25US)
+*VRST VRST VSS PULSE(0 1.8 0.0 2NS 2NS 10US 50US)
+*IBIAS VDD IBIAS dc 2u
+
 *VRST VRST VSS dc 0
 Vtest rst VSS dc 0
 
     
 *-----------------------------------------------------------------
-* DUT
+* DUT xschem
 *-----------------------------------------------------------------
-XDUT VDD_1V8 VSS VOUT VRST TOPLEVEL
+
+*.subckt TOPLEVEL VDD VSS VOUT VRST
+XDUT VDD_1V8 VSS VOUT rst2 TOPLEVEL
+
 adut [clk VOUT rst] [rst2 d8 d7 d6 d5 d4 d3 d2 d1 d0]  null dut
 .model dut d_cosim simulation="../dtt.so"
 
-R11 rst2 VRST 10k
+
+
+
+
+
+*R11 rst2 rst 10k
+R10 rst2 VSS 1M
 
 R1 d1 VSS 1M
 R2 d2 VSS 1M
@@ -50,7 +62,7 @@ R7 d7 VSS 1M
 R8 d8 VSS 1M
 R0 d0 VSS 1M
 
-R10 rst2 VSS 1M
+
 
 *----------------------------------------------------------------
 * MEASURES
@@ -62,13 +74,19 @@ R10 rst2 VSS 1M
 *----------------------------------------------------------------
 
 *.save all
-*TOPLEVEL values
-.save v(VOUT) v(XDUT.VREF) v(XDUT.I_PTAT) v(VRST)
+
+*TOPLEVEL valuescat
+.save v(VOUT) v(VRST) v(XDUT.VREF) v(XDUT.I_PTAT) 
 
 *Milestone 1 values
-.save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1) 
+.save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1)
 
-.save v(clk) v(d1) v(d2) v(d3) v(d4) v(d5) v(d6) v(d7) v(d8) v(d0) v(VRST) v(rst2)
+
+.save v(d0) v(d1) v(d2) v(d3) v(d4) v(d5) v(d6) v(d7) v(d8)
+.save i(vdd)
+.save v(clk) v(rst2)
+*.save all
+
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -79,27 +97,30 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 10n 10u 0
+*save @m.xdut.x3.x7.xm1.msky130_fd_pr__pfet_01v8[id]
 
+
+optran 0 0 0 10n 10u 0 
 option TEMP=-40
-tran 100n 100u 30u
+tran 1m 800u 400u 100u
 write {cicname}_-40.raw
 
-option TEMP=0
-tran 100n 100u 30u
-write {cicname}_0.raw
+*option TEMP=0
+*tran 1m 475u 400u 100u
+*write {cicname}_0.raw
+*
+*option TEMP=27
+*tran 1m 475u 400u 100u
+*write {cicname}_27.raw
+*
+*option TEMP=75
+*tran 1m 475u 400u 100u
+*write {cicname}_75.raw
+*
+*option TEMP=125
+*tran 1m 475u 400u 100u
+*write {cicname}_125.raw
 
-option TEMP=27
-tran 100n 100u 30u
-write {cicname}_27.raw
-
-option TEMP=75
-tran 100n 100u 30u
-write {cicname}_75.raw
-
-option TEMP=125
-tran 100n 100u 30u
-write {cicname}_125.raw
 
 exit
 

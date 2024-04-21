@@ -12,16 +12,21 @@ def comp(val):
 
 def main(name):
   # Delete next line if you want to use python post processing
-  #return
-  yamlfile = name + ".yaml"
+   #return
+   yamlfile = name + ".yaml"
+   #print(yamlfile)
 
-  # Read result yaml file
-  with open(yamlfile) as fi:
-    obj = yaml.safe_load(fi)
+   # Read result yaml file
+   with open(yamlfile) as fi:
+      obj = yaml.safe_load(fi)
+      
 
-  # Do something to parameters
-  # Assuming the 8 single boolean values are True or False
-  # For example, let's take the boolean values as follows:
+   # Do something to parameters
+   # Assuming the 8 single boolean values are True or False
+   # For example, let's take the boolean values as follows:
+   
+   bool_values = [False, False, False, False, False, False, False, False]
+
 
   bool_values_n40 = [False, False, False, False, False, False, False, False, False]
 
@@ -244,10 +249,13 @@ def main(name):
   print(comp(x_125))
   print(comp(124))
 
+
   plt.plot([-40, 0, 25, 75, 125], [comp(x_n40), comp(x_0), comp(x_27), comp(x_75), comp(x_125)])
   plt.ylabel('some numbers')
   plt.show()
 
+
   # Save new yaml file
   with open(yamlfile,"w") as fo:
     yaml.dump(obj,fo)
+

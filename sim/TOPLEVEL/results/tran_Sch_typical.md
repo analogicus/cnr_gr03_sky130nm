@@ -4,6 +4,7 @@ For details see <a href='tran_Sch_typical.html'>tran_Sch_typical.html</a>
 
 |**Name**|**Parameter**|**View**|**Min** | **Typ** | **Max**|
 |:---|:---|:---:|:---:|:---:|:---:|
+
 ||d1 | Spec |  |  |  |
 | | | ('Sch',)|3.30 V | 3.30 V | 3.30 V |
 ||d2 | Spec |  |  |  |
@@ -17,4 +18,6 @@ For details see <a href='tran_Sch_typical.html'>tran_Sch_typical.html</a>
 ||d6 | Spec |  |  |  |
 | | | ('Sch',)| |  |  |
 ||d7 | Spec |  |  |  |
-| | | ('Sch',)| |  |  |
+=======
+||d0 | Spec |  |  |  |
+

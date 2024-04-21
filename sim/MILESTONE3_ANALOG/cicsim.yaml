@@ -1,0 +1,6 @@
+corner:
+  Lay: ''
+  Sch: ''
+ngspice:
+  library: MILESTONE3_ANALOG
+  cell: MILESTONE3_ANALOG
