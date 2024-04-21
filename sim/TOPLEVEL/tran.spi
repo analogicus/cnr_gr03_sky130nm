@@ -39,15 +39,11 @@ Vtest rst VSS dc 0
 *-----------------------------------------------------------------
 *.subckt TOPLEVEL VDD VSS VOUT VRST
 XDUT VDD_1V8 VSS VOUT rst2 TOPLEVEL
-adut [clk VOUT rst] [rst2 d7 d6 d5 d4 d3 d2 d1 d0]  null dut
+adut [clk VOUT rst] [rst2 d8 d7 d6 d5 d4 d3 d2 d1 d0]  null dut
 .model dut d_cosim simulation="../dtt.so"
 
 
-*-----------------------------------------------------------------
-* DUT lay
-*-----------------------------------------------------------------
-*.subckt M3 clk data_out[5] in data_out[0] data_out[2] data_out[7] data_out[4] data_out[6] data_out[1] rst data_out[3] rst_cap VPWR VGND
-*xadut clk d5 VOUT d0 d2 d7 d4 d6 d1 rst2 d3 rst VDD VSS M3
+
 
 
 
@@ -82,7 +78,8 @@ R0 d0 VSS 1M
 *Milestone 1 values
 .save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1)
 
-.save v(d0) v(d1) v(d2) v(d3) v(d4) v(d5) v(d6) v(d7)
+.save v(d0) v(d1) v(d2) v(d3) v(d4) v(d5) v(d6) v(d7) v(d8)
+.save i(vdd)
 .save v(clk) v(rst2)
 *.save all
 
@@ -99,11 +96,25 @@ unset askquit
 
 
 optran 0 0 0 10n 10u 0 
+option TEMP=-40
+tran 1m 800u 400u 100u
+write {cicname}_-40.raw
 
-
-option TEMP=27
-tran 10000m 475u 400u 100u
-write {cicname}_27.raw
+*option TEMP=0
+*tran 1m 475u 400u 100u
+*write {cicname}_0.raw
+*
+*option TEMP=27
+*tran 1m 475u 400u 100u
+*write {cicname}_27.raw
+*
+*option TEMP=75
+*tran 1m 475u 400u 100u
+*write {cicname}_75.raw
+*
+*option TEMP=125
+*tran 1m 475u 400u 100u
+*write {cicname}_125.raw
 
 
 exit
