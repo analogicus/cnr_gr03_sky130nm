@@ -37,8 +37,10 @@ Vtest rst VSS dc 0
 *-----------------------------------------------------------------
 * DUT xschem
 *-----------------------------------------------------------------
+
 *.subckt TOPLEVEL VDD VSS VOUT VRST
 XDUT VDD_1V8 VSS VOUT rst2 TOPLEVEL
+
 adut [clk VOUT rst] [rst2 d8 d7 d6 d5 d4 d3 d2 d1 d0]  null dut
 .model dut d_cosim simulation="../dtt.so"
 
@@ -57,6 +59,7 @@ R4 d4 VSS 1M
 R5 d5 VSS 1M
 R6 d6 VSS 1M
 R7 d7 VSS 1M
+R8 d8 VSS 1M
 R0 d0 VSS 1M
 
 
@@ -78,10 +81,12 @@ R0 d0 VSS 1M
 *Milestone 1 values
 .save v(XDUT.X1.OTA_OUT) v(XDUT.X1.VD1) v(XDUT.X1.VR1)
 
+
 .save v(d0) v(d1) v(d2) v(d3) v(d4) v(d5) v(d6) v(d7) v(d8)
 .save i(vdd)
 .save v(clk) v(rst2)
 *.save all
+
 
 *----------------------------------------------------------------
 * NGSPICE control
