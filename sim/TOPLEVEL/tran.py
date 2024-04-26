@@ -176,7 +176,7 @@ def main(name):
   int_value = 0
   for i, value in enumerate(bool_values_n40):
       int_value |= value << (8 - i)
-  if bool_values_n40[8]: 
+  if bool_values_n40[0]: 
      for i in range(23):
         int_value |= value << (9 + i)
   # Printing out the int8 value
@@ -189,7 +189,7 @@ def main(name):
   int_value = 0
   for i, value in enumerate(bool_values_0):
       int_value |= value << (8 - i)
-  if bool_values_0[8]: 
+  if bool_values_0[0]: 
      for i in range(23):
         int_value |= value << (9 + i)
   # Printing out the int8 value
@@ -202,7 +202,7 @@ def main(name):
   int_value = 0
   for i, value in enumerate(bool_values_27):
       int_value |= value << (8 - i)
-  if bool_values_27[8]: 
+  if bool_values_27[0]: 
      for i in range(23):
         int_value |= value << (9 + i)
   # Printing out the int8 value
@@ -215,7 +215,7 @@ def main(name):
   int_value = 0
   for i, value in enumerate(bool_values_75):
       int_value |= value << (8 - i)
-  if bool_values_75[8]: 
+  if bool_values_75[0]: 
      for i in range(23):
         int_value |= value << (9 + i)
   # Printing out the int8 value
@@ -228,7 +228,7 @@ def main(name):
   int_value = 0
   for i, value in enumerate(bool_values_125):
       int_value |= value << (8 - i)
-  if bool_values_125[8]: 
+  if bool_values_125[0]: 
      for i in range(23):
         int_value |= value << (9 + i)
   # Printing out the int8 value
